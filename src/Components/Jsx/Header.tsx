@@ -1,58 +1,58 @@
-import {
-    Avatar,
-    Dropdown,
-    DropdownDivider,
-    DropdownHeader,
-    DropdownItem,
-    Navbar,
-    NavbarBrand,
-    NavbarCollapse,
-    NavbarLink,
-    NavbarToggle,
-} from "flowbite-react";
-
 import '../home.css';
+import '../mytheme.css';
+import logo from '../../img/logo.png';
+import myPage from '../../img/myPage.svg'
 
 function Header() {
 
-    // header container footer를 사용할 예정(9.24)
     return (
         <>
-            <Navbar fluid rounded>
-                <NavbarBrand href="https://flowbite-react.com">
-                    <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
-                </NavbarBrand>
-                <div className="flex md:order-2">
-                    <Dropdown
-                        arrowIcon={false}
-                        inline
-                        label={
-                            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-                        }
-                    >
-                        <DropdownHeader>
-                            <span className="block text-sm">Bonnie Green</span>
-                            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
-                        </DropdownHeader>
-                        <DropdownItem>Dashboard</DropdownItem>
-                        <DropdownItem>Settings</DropdownItem>
-                        <DropdownItem>Earnings</DropdownItem>
-                        <DropdownDivider />
-                        <DropdownItem>Sign out</DropdownItem>
-                    </Dropdown>
-                    <NavbarToggle />
+            <div className="navbar bg-base-100 shadow-sm" id="">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul className="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <img src={logo} alt="" className='logo' />
                 </div>
-                <NavbarCollapse>
-                    <NavbarLink href="#" active>
-                        Home
-                    </NavbarLink>
-                    <NavbarLink href="#">About</NavbarLink>
-                    <NavbarLink href="#">Services</NavbarLink>
-                    <NavbarLink href="#">Pricing</NavbarLink>
-                    <NavbarLink href="#">Contact</NavbarLink>
-                </NavbarCollapse>
-            </Navbar>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <details>
+                                <summary>Parent</summary>
+                                <ul className="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <div className="navbar-end">
+                    <a href="">sign in</a>
+                    <div className="avatar">
+                        <div className="w-12 rounded-full">
+                            <img src={myPage} className='my_page' />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

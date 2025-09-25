@@ -1,4 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind base;
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+.homeBg {
+    min-height: 100vh;
+
+}
+
+.navbar {
+    height: 6rem;
+    padding: 2rem
+}
+
+.navbar-end {
+    a{
+        margin: 0 1.5rem 0 0;
+    }
+
+    .my_page{
+        background-color: white;
+           
+    }
+}
+
+
+
+.logo {
+    width: 4rem;
+    height: 4rem;
+}

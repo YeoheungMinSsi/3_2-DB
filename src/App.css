@@ -1,10 +1,19 @@
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
+@plugin "daisyui";
 
 #root {
   max-width: 1280px;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: oklch(98% 0.019 200.873);
+}
+
+
+body{
+  background-color: oklch(98% 0.019 200.873);
 }
