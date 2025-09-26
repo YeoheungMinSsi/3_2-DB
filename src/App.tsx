@@ -1,18 +1,36 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 import './App.css'
-import Home from './Components/Jsx/Home.jsx'
-// import { Button } from "flowbite-react";
-// import Test from './Components/Jsx/Test.jsx'
+import Home from './Components/Jsx/Home.tsx'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <Test /> */}
-      <Home />
-      {/* <Button>Click me</Button> */}
+      {/* <BrowserRouter>
+        <Home />
+      </BrowserRouter> */}
+      <Router>
+        <Home />
+      </Router>
     </>
   )
 }
 
 export default App
+
+// import { BrowserRouter as Router } from 'react-router-dom';
+
+
+// function App() {
+
+//   return (
+//     <>
+//       <Router>
+//         <Home />
+//       </Router>
+//     </>
+//   )
+// }
+
+// export default App

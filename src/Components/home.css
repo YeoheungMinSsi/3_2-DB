@@ -4,14 +4,24 @@
 
 .homeBg {
     min-height: 100vh;
-
+    display: flex;
+    flex-direction: column;
 }
 
+.home-container, .cocktail-container {
+    flex-grow: 1;
+}
+.home-header, .home-footer {
+  padding: 0 40px;
+  background-color: rgb(237, 255, 255);
+}
+
+
+/* navbar 관련 css */
 .navbar {
-    height: 6rem;
+    height: 5rem;
     padding: 2rem
 }
-
 .navbar-end {
     a{
         margin: 0 1.5rem 0 0;
@@ -22,9 +32,6 @@
            
     }
 }
-
-
-
 .logo {
     width: 4rem;
     height: 4rem;
