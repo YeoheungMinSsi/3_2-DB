@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@plugin "daisyui";
+
+/* 2560px 이상의 해상도를 위한 설정 */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+
+#main {
+  width: 100%;
+  background-color: oklch(83.262% 0.04127 17.887);
+}
+
+#header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(250, 223, 184);
+
+}
+
+.header-container{
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;  
+    padding-left: 32px;
+  padding-right: 32px;
+  background-color: aqua;
+}
+
+
+#page-Name {
+  font-size: 1.5rem;
+  width: 9rem;
+}
+#page_login{
+  width: 9rem;
+}
+
+.header-nav-container {
+  /* margin-left: 7rem; */
+}
+
+
+.header-nav-list {
+  display: flex;
+  /* flex-direction: column; */
+
+}
+
+.header-nav {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+.right_header {
+  margin-left: auto;
+}
+
+
+/* container line */
+#container {
+  width: 100%;
+  /* height: 100vh; */
+  
+  padding-left: 32px;
+  padding-right: 32px;
+
+  /* background-color: azure; */
+}
+
+.content{
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  display: flex; /* 자식 요소들을 가로로 배치 */
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-items: center */
+  /* align-items: center; */
+
+  min-height: 25rem; /* 전체 content 영역의 최소 높이 확보 */
+}
+
+#Card_Container, #fixed-info-box {
+  margin: 0;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.info-box{
+  display: flex;
+  align-items: center; /* 위쪽 정렬 */
+}
+.fixed-info-box {
+  width: 100%; /* Card의 너비와 동일하게 고정 */
+  height: 20rem; /* Card의 높이와 동일하게 고정 */
+}
+
+
+
+/* .hover-3d{
+  width: 20rem;
+  height: 10rem;
+} */
+
+.Main-card{
+  width: 20rem;
+  height: 10rem;
+}
