@@ -13,7 +13,12 @@
 
 #main {
   width: 100%;
-  background-color: oklch(83.262% 0.04127 17.887);
+  /* background-color: oklch(83.262% 0.04127 17.887); */
+}
+
+/* 박스의 그림자를 상하좌우 모든 크기로 만듦 */
+#drink-category-box{
+  box-shadow: 0rem 0rem .5rem gray;
 }
 
 #header {
@@ -22,7 +27,6 @@
   display: flex;
   align-items: center;
   background-color: rgb(250, 223, 184);
-
 }
 
 .header-container{
