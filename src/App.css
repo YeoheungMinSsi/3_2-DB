@@ -91,3 +91,7 @@
   height: 25rem; /* Card의 높이와 동일하게 고정 */
   margin-top: 3rem; /* Card의 my-12 (48px)와 비슷한 상단 여백 설정 */
 }
+
+.hero-card{
+  height: 8rem;
+}

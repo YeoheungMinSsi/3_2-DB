@@ -12,19 +12,19 @@ export const ALL_DRINK_CATEGORIES: DrinkCategory[] = [
         mediumCategories: [
             "Beer (맥주)",
             "Wine (와인)",
-            "Sake (사케/청주)",
             "Makgeolli (막걸리/탁주)",
+            "Sake (사케/청주)",
             "Cider (애플사이더)"
         ]
     },
     {
         majorCategory: "증류주 (Distilled)",
         mediumCategories: [
+            "Whiskey (위스키)",
             "Gin (진)",
             "Vodka (보드카)",
             "Rum (럼)",
             "Tequila (데킬라)",
-            "Whiskey (위스키)",
             "Brandy (브랜디/코냑)",
             "Baijiu (백주)",
             "Soju (소주)"

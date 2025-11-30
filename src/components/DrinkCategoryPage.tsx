@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { ALL_DRINK_CATEGORIES } from '../data/DrinkCategoryData';
 // 💡 DrinkCategory는 순수 타입이므로 'import type'을 사용합니다. (ts(1484) 및 ts(6133) 해결)
 import type { DrinkCategory } from '../data/DrinkCategoryData';
-import '../App.css';
+
 
 // Props 타입 정의
 interface DrinkCategoryPageProps {
@@ -80,8 +80,38 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
         pageTitle = '🍾 주류 타입 분류 (Type of Alcohol)';
     }
 
+    // 💡 대분류 이름을 변환하는 헬퍼 함수
+    const formatMajorCategoryName = (name: string) => {
+        // "발효주 (Fermented)" -> ["발효주 ", "Fermented)"]
+        const parts = name.split('(');
+        if (parts.length === 2) {
+            const korean = parts[0].trim(); // "발효주"
+            const english = parts[1].replace(')', '').trim(); // "Fermented"
+            return `${korean} (${english})`; // "발효주 (Fermented)"
+        }
+        return name;
+    };
+
+    // 💡 대분류 버튼에 적용할 변환 로직
+    const getMajorCategoryDisplay = (name: string) => {
+        const parts = name.split('(');
+        if (parts.length === 2) {
+            const korean = parts[0].trim();
+            const english = parts[1].replace(')', '').trim();
+            // 💡 한글 (영문) 순서로 표시
+            return (
+                <React.Fragment>
+                    <span className="font-bold mr-1">{korean}</span>
+                    <span className="text-sm opacity-80">({english})</span>
+                </React.Fragment>
+            );
+        }
+        return name;
+    };
+
+
     return (
-        <div className="p-8 bg-white rounded-lg mt-8 w-full max-w-7xl mx-auto" id="drink-category-box">
+        <div className="p-8 bg-white shadow-xl rounded-lg mt-8 w-full max-w-7xl mx-auto">
             <h1 className="text-3xl font-bold text-gray-800 border-b pb-2 mb-6">{pageTitle}</h1>
 
             {/* 💡 [3단 레이아웃] w-1/4, w-1/4, w-1/2 분할 */}
@@ -89,7 +119,7 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
 
                 {/* === COLUMN 1: 대분류 (제조 방식) === */}
                 <div className="w-1/5 pr-6 border-r border-gray-200">
-                    <h2 className="text-2xl font-semibold text-amber-700 mb-4">제조 방식</h2>
+                    <h2 className="text-xl font-semibold text-amber-700 mb-4">제조 방식</h2>
                     <ul className="space-y-2">
                         {drinkCategories.map((category) => (
                             <li key={category.majorCategory}>
@@ -101,7 +131,8 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
                                             : 'hover:bg-gray-50'
                                         }`}
                                 >
-                                    {category.majorCategory}
+                                    {/* 💡 새로운 헬퍼 함수를 사용하여 렌더링 순서 변경 */}
+                                    {getMajorCategoryDisplay(category.majorCategory)}
                                 </button>
                             </li>
                         ))}
@@ -111,22 +142,31 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
                 {/* === COLUMN 2: 중분류 리스트 (클릭된 대분류에 속하는 항목) === */}
                 {currentMajorCategory && (
                     <div className="w-1/4 px-6 border-r border-gray-200">
-                        <h2 className="text-xl font-semibold text-amber-700 mb-4">{currentMajorCategory.majorCategory}</h2>
+                        <h2 className="text-xl font-semibold text-amber-700 mb-4">{formatMajorCategoryName(currentMajorCategory.majorCategory)}</h2>
                         <ul className="space-y-2">
-                            {currentMajorCategory.mediumCategories.map((mediumItem) => (
-                                <li key={mediumItem}>
-                                    <button
-                                        onClick={() => handleMediumItemClick(mediumItem)}
-                                        className={`w-full text-left p-3 rounded-lg transition duration-150 text-gray-700
+                            {currentMajorCategory.mediumCategories.map((mediumItem) => {
+                                // 데이터 예: "Gin (진)"
+                                const parts = mediumItem.split('(');
+                                const englishName = parts[0].trim(); // "Gin"
+                                const koreanName = parts.length > 1 ? parts[1].replace(')', '').trim() : ''; // "진"
+
+                                return (
+                                    <li key={mediumItem}>
+                                        <button
+                                            onClick={() => handleMediumItemClick(mediumItem)}
+                                            className={`w-full text-left p-3 rounded-lg transition duration-150 text-gray-700
                                             ${selectedMediumItem === mediumItem
-                                                ? 'bg-blue-100 font-bold text-blue-900 border-l-4 border-blue-500'
-                                                : 'hover:bg-gray-50'
-                                            }`}
-                                    >
-                                        {mediumItem.split('(')[0].trim()} {/* 영어 이름만 표시 */}
-                                    </button>
-                                </li>
-                            ))}
+                                                    ? 'bg-blue-100 font-bold text-blue-900 border-l-4 border-blue-500'
+                                                    : 'hover:bg-gray-50'
+                                                }`}
+                                        >
+                                            {/* 💡 [수정]: 영문 (한글) 순서로 표시 */}
+                                            <span className="font-medium">{englishName}</span>
+                                            {koreanName && <span className="text-xs opacity-70 ml-1">({koreanName})</span>}
+                                        </button>
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </div>
                 )}
@@ -144,7 +184,7 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
                                 {currentMajorCategory ? "우측 중분류를 선택해주세요." : "좌측 대분류를 선택해주세요."}
                             </p>
                             <p className="text-sm">
-                                {currentMajorCategory ? `"${currentMajorCategory.majorCategory}"에 속하는 상세 주류를 선택하세요.` : "제조 방식(발효주, 증류주, 혼성주)을 선택하면 중분류가 표시됩니다."}
+                                {currentMajorCategory ? `"${formatMajorCategoryName(currentMajorCategory.majorCategory)}"에 속하는 상세 주류를 선택하세요.` : "제조 방식(발효주, 증류주, 혼성주)을 선택하면 중분류가 표시됩니다."}
                             </p>
                         </div>
                     )}

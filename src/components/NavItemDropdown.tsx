@@ -34,7 +34,7 @@ const NavItemDropdown: React.FC<NavItemDropdownProps> = ({ title, menuGroups, ta
             <div
                 tabIndex={tabIndex}
                 role="button"
-                className="m-1 font-normal text-lg cursor-pointer flex items-center p-2 rounded-lg hover:bg-amber-100 transition duration-150"
+                className="m-1 font-normal text-lg cursor-pointer flex items-center p-2 rounded-lg hover:bg-gray-100 transition duration-150"
             >
                 {title}
                 {/* 드롭다운 아이콘 */}
