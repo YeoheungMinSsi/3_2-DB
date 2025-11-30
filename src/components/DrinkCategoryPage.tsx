@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
-
-// 데이터 구조 정의
-interface DrinkCategory {
-    majorCategory: string; // 대분류 이름 (예: "발효주")
-    mediumCategories: string[]; // 중분류 이름 (예: "Beer (맥주)")
-}
+// 💡 데이터 파일에서 인터페이스와 데이터를 import합니다.
+// ALL_DRINK_CATEGORIES는 값이므로 일반 import를 사용합니다.
+import { ALL_DRINK_CATEGORIES } from '../data/DrinkCategoryData';
+// 💡 DrinkCategory는 순수 타입이므로 'import type'을 사용합니다. (ts(1484) 및 ts(6133) 해결)
+import type { DrinkCategory } from '../data/DrinkCategoryData';
+import '../App.css';
 
 // Props 타입 정의
 interface DrinkCategoryPageProps {
@@ -12,54 +12,18 @@ interface DrinkCategoryPageProps {
 }
 
 
-// 💡 상세 정보를 표시할 더미 컴포넌트 (Gin 상세 페이지 등)
+// 💡 상세 정보를 표시할 더미 컴포넌트 (COLUMN 3)
 const DrinkDetailView: React.FC<{ mediumItem: string }> = ({ mediumItem }) => (
     <div className="p-8 bg-amber-50 rounded-lg h-full border border-amber-200">
         <h2 className="text-2xl font-bold text-amber-800 mb-4">🔍 {mediumItem} 상세 정보</h2>
         <p className="text-gray-700">
-            {/* **{mediumItem}**에 대한 자세한 정보(역사, 제조법, 주요 브랜드, 칵테일 레시피 등)가 여기에 표시됩니다. */}
-            **{mediumItem}**에 대한 정보 표시됩니다.
+            **{mediumItem}**에 대한 자세한 정보(역사, 제조법, 주요 브랜드, 칵테일 레시피 등)가 여기에 표시됩니다.
+        </p>
+        <p className="mt-4 text-sm text-gray-500">
+            (현재는 `{mediumItem}`을(를) 위한 더미 페이지입니다.)
         </p>
     </div>
 );
-
-
-// 💡 [핵심 데이터] 제조 방식에 따른 3가지 타입
-const ALL_DRINK_CATEGORIES: DrinkCategory[] = [
-    {
-        majorCategory: "발효주 (Fermented)",
-        mediumCategories: [
-            "맥주",
-            "와인",
-            "사케/청주",
-            "탁주/막걸리",
-            "애플사이더"
-        ]
-    },
-    {
-        majorCategory: "증류주 (Distilled)",
-        mediumCategories: [
-            "진",
-            "보드카",
-            "럼",
-            "데킬라",
-            "위스키",
-            "브랜디/코냑",
-            "백주",
-            "소주"
-        ]
-    },
-    {
-        majorCategory: "혼성주 (Compound)",
-        mediumCategories: [
-            "리큐르(Liqueur)",
-            "베르무트(Vermouth)",
-            "비터스(Bitters)",
-            "셰리 와인(Sherry)",
-            "포트 와인(Port)"
-        ]
-    },
-];
 
 
 const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) => {
@@ -68,13 +32,13 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
     // 💡 [상태 2] 현재 선택된 중분류 항목 (mediumItem)
     const [selectedMediumItem, setSelectedMediumItem] = useState<string | null>(null);
 
-    // 💡 categoryType에 따라 보여줄 대분류 목록 필터링
+    // 💡 useMemo를 사용하여 categoryType에 따라 표시할 대분류 목록 필터링
     const drinkCategories = useMemo(() => {
         if (categoryType === 'SPIRIT_ONLY') {
             // 조주 정보 -> 기주 종류: '증류주'만 표시
             return ALL_DRINK_CATEGORIES.filter(c => c.majorCategory.includes('증류주'));
         } else {
-            // Drink -> 술 분류: 모든 분류(발효, 증류, 혼성) 표시
+            // Drink -> 술 분류 (DRINK_TYPE_ONLY 또는 GENERAL): 모든 분류(발효, 증류, 혼성) 표시
             return ALL_DRINK_CATEGORIES;
         }
     }, [categoryType]);
@@ -87,7 +51,7 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
         if (categoryType === 'SPIRIT_ONLY' && drinkCategories.length > 0) {
             setSelectedMajorCategory(drinkCategories[0].majorCategory);
         }
-    }, [categoryType]);
+    }, [categoryType, drinkCategories]);
 
     // 선택된 대분류 객체 찾기
     const currentMajorCategory = drinkCategories.find(
@@ -103,6 +67,7 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
 
     // 💡 [핸들러 2] 중분류 항목 클릭 시 호출 (상세 페이지 이동 전)
     const handleMediumItemClick = (mediumItemName: string) => {
+        // 중분류 선택 상태 업데이트
         setSelectedMediumItem(mediumItemName);
         console.log(`소분류(상세) 페이지: ${mediumItemName}`);
     };
@@ -120,17 +85,17 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
             <h1 className="text-3xl font-bold text-gray-800 border-b pb-2 mb-6">{pageTitle}</h1>
 
             {/* 💡 [3단 레이아웃] w-1/4, w-1/4, w-1/2 분할 */}
-            <div className="flex min-h-[600px]">
+            <div className="flex min-h-[500px]">
 
                 {/* === COLUMN 1: 대분류 (제조 방식) === */}
-                <div className="w-1/4.5 pr-6 border-r border-gray-200">
-                    <h2 className="text-xl font-semibold text-amber-700 mb-4">제조 방식</h2>
+                <div className="w-1/5 pr-6 border-r border-gray-200">
+                    <h2 className="text-2xl font-semibold text-amber-700 mb-4">제조 방식</h2>
                     <ul className="space-y-2">
                         {drinkCategories.map((category) => (
                             <li key={category.majorCategory}>
                                 <button
                                     onClick={() => handleMajorCategoryClick(category.majorCategory)}
-                                    className={`w-55 text-left p-3 rounded-lg transition duration-150 text-gray-700
+                                    className={`w-full text-left p-3 rounded-lg transition duration-150 text-gray-700
                                         ${selectedMajorCategory === category.majorCategory
                                             ? 'bg-amber-100 font-bold text-amber-900 border-l-4 border-amber-500'
                                             : 'hover:bg-gray-50'

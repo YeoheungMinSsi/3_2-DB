@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 // App.tsx와 일치하도록 타입 정의
 interface CocktailData {

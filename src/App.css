@@ -26,7 +26,7 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  background-color: rgb(250, 223, 184);
+  /* background-color: rgb(250, 223, 184); */
 }
 
 .header-container{
@@ -88,6 +88,6 @@
 /* --- 새로 추가: 정보 박스(CocktailInfo)의 고정 크기 설정 --- */
 .fixed-info-box {
   width: 55rem; /* Card의 너비와 동일하게 고정 */
-  height: 20rem; /* Card의 높이와 동일하게 고정 */
+  height: 25rem; /* Card의 높이와 동일하게 고정 */
   margin-top: 3rem; /* Card의 my-12 (48px)와 비슷한 상단 여백 설정 */
 }
