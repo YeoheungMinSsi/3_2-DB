@@ -11,7 +11,7 @@ import RelatedPage from './components/RelatedPage';
 import DrinkCategoryPage from './components/DrinkCategoryPage';
 import CocktailListPage from './components/CocktailListPage';
 
-// JSON 데이터를 가져옵니다.
+// JSON 데이터를 가져옵니다. (백엔드 연동 대신 이전처럼 로컬 public 폴더에서 직접 가져옴)
 import cocktailData from '../public/sul.json';
 
 
@@ -66,19 +66,32 @@ function App() {
   const [currentPage, setCurrentPage] = useState<Page>('HOME');
   const [currentCategoryType, setCurrentCategoryType] = useState<CategoryType>('GENERAL');
 
-  // 💡 [복구] 로컬 JSON을 직접 로드합니다. (동기적)
+  // 💡 [복구] useEffect 대신, 로컬 JSON을 직접 로드하여 초기화합니다.
   const allCocktails: CocktailData[] = cocktailData as CocktailData[];
-  
-  // 💡 [수정] currentCocktail을 초기에는 명시적으로 null로 설정합니다.
-  // 이 상태로 시작해야 CocktailInfo에서 "카드를 클릭하여 추천받으세요!" 메시지가 뜹니다.
-  const [currentCocktail, setCurrentCocktail] = useState<CocktailData | null>(null);
 
-  // 💡 [핵심 수정] useEffect 훅을 제거합니다. 
-  // 이 훅이 처음 렌더링 시 currentCocktail을 무작위로 설정하는 원인이었습니다.
+  // 💡 [복구] 초기 로딩 상태 및 오류 상태 제거
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [isError, setIsError] = useState(false); 
+
+  // 💡 [복구] 초기 칵테일 설정 로직: App 컴포넌트가 마운트될 때 한 번 실행합니다.
+  const initialCocktail = () => {
+    if (allCocktails.length > 0) {
+      const randomIndex = Math.floor(Math.random() * allCocktails.length);
+      return allCocktails[randomIndex];
+    }
+    return null;
+  }
+  const [currentCocktail, setCurrentCocktail] = useState<CocktailData | null>(initialCocktail);
+
+
+  // 💡 [제거] NestJS 백엔드 API에서 데이터를 가져오는 useEffect 로직을 제거합니다.
   /*
   useEffect(() => {
-    // 이 로직 제거
-  }, [allCocktails, currentCocktail]); 
+    const fetchCocktails = async () => {
+      // ... (기존 API 로직 제거) ...
+    };
+    fetchCocktails();
+  }, []);
   */
 
 
@@ -108,8 +121,8 @@ function App() {
   const renderPageContent = () => {
     const contentWrapperClass = 'w-full max-w-[1440px] mx-auto';
 
-    // 💡 [복구] 로딩/오류 상태 체크가 필요 없어졌으므로 제거합니다.
-    
+    // 💡 [제거] 로딩 중 또는 오류 발생 시의 조건부 렌더링을 제거합니다.
+
     switch (currentPage) {
       case 'HOME':
         return (

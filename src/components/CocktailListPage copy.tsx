@@ -140,7 +140,7 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
                                             {/* 이름/카테고리/도수 정보 영역 */}
                                             <div className="flex-1 min-w-0">
                                                 {/* 1. 이름 */}
-                                                <h2 className="text-xl font-extrabold text-amber-800 truncate">
+                                                <h2 className="text-3xl font-extrabold text-amber-800 truncate">
                                                     {cocktail.name_kr} ({cocktail.name_en})
                                                 </h2>
                                                 {/* 2. 카테고리 (이름 아래) */}

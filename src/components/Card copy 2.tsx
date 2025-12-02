@@ -12,7 +12,7 @@ function Card({ onClick }: CardProps) {
         <React.Fragment>
             {/* div로 변경하고, onClick 핸들러를 추가하여 클릭 이벤트 처리 */}
             <div
-                className="hover-3d my-12 mx-auto cursor-pointer" // 💡 [수정 완료] mx-auto로 수정
+                className="hover-3d my-12 mx- cursor-pointer"
                 onClick={onClick}
                 role="button" // 접근성 향상을 위해 버튼 역할 명시
                 tabIndex={0} // 키보드 접근성 활성화
