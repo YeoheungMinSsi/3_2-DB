@@ -3,11 +3,6 @@
 @source "../.flowbite-react/class-list.json";
 @plugin "daisyui";
 
-body {
-  /* 💡 [핵심 수정] 스크롤 바 공간을 항상 예약하여, 스크롤 유무와 상관없이 화면 너비를 고정합니다. */
-  overflow-y: scroll;
-}
-
 /* 2560px 이상의 해상도를 위한 설정 */
 @media (min-width: 2560px) {
   .container {
@@ -99,10 +94,4 @@ body {
 
 .hero-card{
   height: 8rem;
-}
-
-#cockList-detail-button{
-  height: 4rem;
-  width: 6rem;
-  font-size: large;
 }

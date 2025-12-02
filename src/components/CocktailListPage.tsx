@@ -12,7 +12,7 @@ interface CocktailData {
     ingredients: string[];
     ingredients_kr: string[];
     method_kr: string;
-    calculated_abv?: string; // sul.json에 있으나 타입 정의가 누락된 경우를 대비해 추가
+    calculated_abv?: string; // 💡 sul.json에 있는 도수 필드
 }
 
 interface CocktailListPageProps {
@@ -29,10 +29,8 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
 
     // ----------------------------------------------------
     // 💡 [페이지네이션 로직]
-    // 총 페이지 수 계산
     const totalPages = Math.ceil(cocktails.length / ITEMS_PER_PAGE);
 
-    // 현재 페이지에 표시할 항목의 시작 및 끝 인덱스 계산
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
 
@@ -55,7 +53,7 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
     const handleLastPage = () => handlePageChange(totalPages);
 
 
-    // 💡 표시할 페이지 번호 목록 계산 (최대 5개 표시 + 생략 처리) - 로직 개선
+    // 💡 표시할 페이지 번호 목록 계산 (최대 5개 표시 + 생략 처리) - 안정화된 로직
     const pagesToShow = useMemo(() => {
         if (totalPages <= 1) return [];
 
@@ -66,7 +64,7 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
         let start = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
         let end = Math.min(totalPages, start + maxVisiblePages - 1);
 
-        // 2. 끝 페이지 번호가 totalPages와 멀 때 시작점 조정
+        // 2. 끝 페이지 번호가 totalPages와 가까울 때 시작점 조정
         if (end - start + 1 < maxVisiblePages) {
             start = Math.max(1, totalPages - maxVisiblePages + 1);
             end = totalPages;
@@ -86,10 +84,11 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
         // 5. 오른쪽 생략 부호 처리 (마지막 페이지 포함)
         if (end < totalPages) {
             if (end < totalPages - 1) pages.push('...'); // totalPages - 1 보다 작으면 생략 부호
-            if (pages[pages.length - 1] !== totalPages) pages.push(totalPages); // 마지막 페이지가 없으면 추가
+            if (pages[pages.length - 1] !== totalPages) pages.push(totalPages);
         }
 
-        return pages;
+        // 중복 페이지 번호 제거 (1과 totalPages가 이미 추가된 경우를 대비)
+        return Array.from(new Set(pages));
 
     }, [currentPage, totalPages]);
     // ----------------------------------------------------
@@ -110,120 +109,136 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
 
     if (!cocktails || cocktails.length === 0) {
         return (
-            <div className="p-8 bg-white shadow-xl rounded-lg mt-8 w-full max-w-4xl mx-auto text-center text-red-500">
+            <div className="bg-white shadow-xl rounded-lg w-full text-center text-red-500 p-8 mt-8">
                 <p>칵테일 데이터를 불러올 수 없거나 목록이 비어 있습니다.</p>
             </div>
         );
     }
 
     return (
-        // max-w-7xl (1280px)을 사용하여, 1440px에 가깝게 너비를 제한하고 중앙 정렬합니다.
-        <div className="p-8 bg-white shadow-xl rounded-lg mt-8 w-full max-w-7xl mx-auto">
-            <h1 className="text-3xl font-bold text-gray-800 border-b pb-2 mb-6">
-                🍸 전체 칵테일 목록 ({cocktails.length}종)
-            </h1>
+        // 레이아웃 문제 해결을 위해 max-w-6xl mx-auto는 제거하고 w-full만 사용합니다.
+        <div className="bg-white shadow-xl rounded-lg w-full">
+            {/* 💡 내부 패딩/마진을 위한 래퍼 */}
+            <div className="p-8 mt-8">
+                <h1 className="text-3xl font-bold text-gray-800 border-b pb-2 mb-6">
+                    🍸 전체 칵테일 목록 ({cocktails.length}종)
+                </h1>
 
-            {/* daisyUI Menu 컨테이너를 사용하여 리스트 구조를 만듭니다. */}
-            <ul className="menu bg-base-100 w-full p-2 rounded-box border border-gray-100 shadow-lg">
-                {currentItems.map((cocktail) => {
-                    // 도수 정보 추출 (sul.json의 calculated_abv 필드 사용)
-                    const abv = cocktail.calculated_abv || "N/A";
+                {/* daisyUI Menu 컨테이너를 사용하여 리스트 구조를 만듭니다. */}
+                <ul className="menu bg-base-100 w-full p-2 rounded-box border border-gray-100 shadow-lg">
+                    {currentItems.map((cocktail) => {
+                        // 💡 도수 정보 추출
+                        const abv = cocktail.calculated_abv || "N/A";
 
-                    return (
-                        <li key={cocktail.cocktail_id} className="mb-2">
-                            {/* 항목 자체를 Hero 스타일로 디자인 */}
-                            <div className="card bg-amber-50 hover:bg-amber-100 shadow-md p-4 transition-all duration-300">
-                                <div className="card-body p-0">
-                                    <div className="flex justify-between items-center">
+                        return (
+                            <li key={cocktail.cocktail_id} className="mb-2">
+                                {/* 항목 자체를 Hero 스타일로 디자인 */}
+                                <div className="card bg-amber-50 hover:bg-amber-100 shadow-md p-4 h-45 transition-all duration-300">
+                                    <div className="card-body p-0">
+                                        <div className="flex justify-between items-center">
 
-                                        {/* 이름 */}
-                                        <div className="flex-1 min-w-0">
-                                            <h2 className="text-lg font-extrabold text-amber-800 truncate">
-                                                {cocktail.name_kr} ({cocktail.name_en})
-                                            </h2>
-                                            <p className="badge badge-outline badge-primary mt-1 text-xs">{cocktail.category}</p>
+                                            {/* 이름/카테고리/도수 정보 영역 */}
+                                            <div className="flex-1 min-w-0">
+                                                {/* 1. 이름 */}
+                                                <h2 className="text-3xl font-extrabold text-amber-800 truncate">
+                                                    {cocktail.name_kr} ({cocktail.name_en})
+                                                </h2>
+                                                {/* 2. 카테고리 (이름 아래) */}
+                                                <p className="badge badge-outline badge-primary mt-1 text-xs">{cocktail.category}</p>
+                                                
+                                                {/* 3. 도수 (카테고리 아래) */}
+                                                <div className="mt-1 flex items-center text-sm text-gray-600">
+                                                    <span className="font-semibold mr-1">도수 (ABV):</span>
+                                                    <span className="font-bold text-blue-600">
+                                                        {abv === "미지원" ? "N/A" : abv}
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            {/* (이전 도수 섹션 제거)
+                                            <div className="w-24 text-center">
+                                                <h3 className="font-semibold text-gray-700">도수 (ABV)</h3>
+                                                <p className="text-lg font-bold text-blue-600">
+                                                    {abv === "미지원" ? "N/A" : abv}
+                                                </p>
+                                            </div> */}
+
+                                            {/* 자세히 버튼 */}
+                                            <div className="ml-8 self-center">
+                                                <button
+                                                    className="btn btn-sm btn-warning"
+                                                    id = "cockList-detail-button"
+                                                    onClick={() => handleDetailClick(cocktail)}
+                                                >
+                                                    자세히
+                                                </button>
+                                            </div>
+
                                         </div>
-
-                                        {/* 도수 */}
-                                        <div className="w-24 text-center">
-                                            <h3 className="font-semibold text-gray-700">도수 (ABV)</h3>
-                                            <p className="text-lg font-bold text-blue-600">{abv}</p>
-                                        </div>
-
-                                        {/* 자세히 버튼 */}
-                                        <div className="ml-8">
-                                            <button
-                                                className="btn btn-sm btn-warning"
-                                                onClick={() => handleDetailClick(cocktail)}
-                                            >
-                                                자세히
-                                            </button>
-                                        </div>
-
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    );
-                })}
-            </ul>
+                            </li>
+                        );
+                    })}
+                </ul>
 
-            {/* 💡 [페이지네이션 컨트롤] */}
-            {totalPages > 1 && (
-                <div className="flex justify-center mt-6 space-x-2">
+                {/* 💡 [페이지네이션 컨트롤] */}
+                {totalPages > 1 && (
+                    <div className="flex justify-center mt-6 space-x-2">
 
-                    {/* 첫 페이지로 이동 버튼 */}
-                    <button
-                        className="btn btn-sm btn-square btn-neutral"
-                        onClick={handleFirstPage}
-                        disabled={currentPage === 1}
-                    >
-                        {'<<'}
-                    </button>
+                        {/* 첫 페이지로 이동 버튼 */}
+                        <button
+                            className="btn btn-sm btn-square btn-neutral"
+                            onClick={handleFirstPage}
+                            disabled={currentPage === 1}
+                        >
+                            {'<<'}
+                        </button>
 
-                    {/* 이전 페이지 버튼 */}
-                    <button
-                        className="btn btn-sm btn-neutral"
-                        onClick={handlePrevPage}
-                        disabled={currentPage === 1}
-                    >
-                        이전
-                    </button>
+                        {/* 이전 페이지 버튼 */}
+                        <button
+                            className="btn btn-sm btn-neutral"
+                            onClick={handlePrevPage}
+                            disabled={currentPage === 1}
+                        >
+                            이전
+                        </button>
 
-                    {/* 페이지 번호 목록 */}
-                    <div className="join">
-                        {pagesToShow.map((page, index) => (
-                            <button
-                                key={index}
-                                className={`join-item btn btn-sm ${page === currentPage ? 'btn-active btn-warning' : ''}`}
-                                // '...' 문자열인 경우 버튼을 비활성화하고 아무것도 하지 않음
-                                onClick={() => typeof page === 'number' && handlePageChange(page)}
-                                disabled={typeof page !== 'number'}
-                            >
-                                {page}
-                            </button>
-                        ))}
+                        {/* 페이지 번호 목록 */}
+                        <div className="join">
+                            {pagesToShow.map((page, index) => (
+                                <button
+                                    key={index}
+                                    className={`join-item btn btn-sm ${page === currentPage ? 'btn-active btn-warning' : ''}`}
+                                    // '...' 문자열인 경우 버튼을 비활성화하고 아무것도 하지 않음
+                                    onClick={() => typeof page === 'number' && handlePageChange(page)}
+                                    disabled={typeof page !== 'number'}
+                                >
+                                    {page}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* 다음 페이지 버튼 */}
+                        <button
+                            className="btn btn-sm btn-neutral"
+                            onClick={handleNextPage}
+                            disabled={currentPage === totalPages}
+                        >
+                            다음
+                        </button>
+
+                        {/* 마지막 페이지로 이동 버튼 */}
+                        <button
+                            className="btn btn-sm btn-square btn-neutral"
+                            onClick={handleLastPage}
+                            disabled={currentPage === totalPages}
+                        >
+                            {'>>'}
+                        </button>
                     </div>
-
-                    {/* 다음 페이지 버튼 */}
-                    <button
-                        className="btn btn-sm btn-neutral"
-                        onClick={handleNextPage}
-                        disabled={currentPage === totalPages}
-                    >
-                        다음
-                    </button>
-
-                    {/* 마지막 페이지로 이동 버튼 */}
-                    <button
-                        className="btn btn-sm btn-square btn-neutral"
-                        onClick={handleLastPage}
-                        disabled={currentPage === totalPages}
-                    >
-                        {'>>'}
-                    </button>
-                </div>
-            )}
+                )}
+            </div>
 
 
             {/* === 💡 칵테일 상세 정보 Modal (daisyUI) === */}
@@ -231,7 +246,10 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
                 <dialog id="cocktail_modal" className={`modal ${isModalOpen ? 'modal-open' : ''}`} open={isModalOpen}>
                     <div className="modal-box w-11/12 max-w-3xl">
                         <h3 className="font-bold text-3xl text-amber-700 mb-2">{selectedCocktail.name_kr}</h3>
-                        <p className="text-lg text-gray-500 mb-4">({selectedCocktail.name_en}) | 도수: {selectedCocktail.calculated_abv || 'N/A'}</p>
+                        {/* 💡 [수정/추가]: 모달 제목 아래에도 도수 정보 표시 */}
+                        <p className="text-lg text-gray-500 mb-4">
+                            ({selectedCocktail.name_en}) | 도수: {selectedCocktail.calculated_abv && selectedCocktail.calculated_abv !== "미지원" ? selectedCocktail.calculated_abv : 'N/A'}
+                        </p>
 
                         <div className="py-4 space-y-4">
 
