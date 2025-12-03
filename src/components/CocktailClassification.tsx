@@ -1,6 +1,6 @@
 // src/components/CocktailClassification.tsx
 import React, { useState, useEffect } from 'react';
-import { CocktailStyle } from './interfaces/CocktailStyle';
+import type { CocktailStyle } from './interfaces/CocktailStyle';
 
 // NestJS API 엔드포인트
 const API_URL = 'http://localhost:3000/cocktail-styles';

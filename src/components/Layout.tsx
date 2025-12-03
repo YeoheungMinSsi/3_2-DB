@@ -3,12 +3,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // ----------------------------------------------------
-// App.css 구조를 재현한 Header 컴포넌트
+// 원본 src/App.tsx의 Header HTML 구조를 그대로 복원했습니다.
 const Header = () => (
-    // src/App.css의 #header 스타일 반영
     <div id="header">
         <div className='header-container'>
-            <div id="page-Name">홈페이지명</div>
+            <div id="page-Name">
+                {/* Link를 사용하여 루트 페이지로 이동하도록 설정 */}
+                <Link to="/">홈페이지명</Link>
+            </div>
             <nav className='header-nav-container'>
                 <ul className='header-nav-list'>
                     {/* "술 정보" 메뉴를 새로운 페이지로 연결합니다. */}
@@ -27,30 +29,30 @@ const Header = () => (
     </div>
 );
 
-// App.tsx의 기존 레이아웃 구조를 단순화한 Footer 컴포넌트
+// App.css에 별도의 #footer 스타일은 없지만, Container 밖에서 구조를 닫아줍니다.
 const Footer = () => (
-    // 간단한 푸터 스타일
     <div id="footer" style={{
         height: '3rem',
         backgroundColor: 'rgb(219, 253, 253)',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: 'auto' // main의 flex-direction: column에 맞게 하단에 고정
     }}>
         푸터입니다.
     </div>
 );
 // ----------------------------------------------------
 
-// 전체 레이아웃 컴포넌트
+// Layout 컴포넌트: #main과 #container ID를 적용합니다.
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
-        // src/App.css의 #main 스타일 반영
+        // 원본 App.css의 #main 스타일을 반영합니다.
         <div id='main'>
             <Header />
 
-            {/* src/App.css의 #container 스타일 반영 */}
-            <div id='container' style={{ minHeight: 'calc(100vh - 8rem)' }}>
+            {/* 원본 App.css의 #container 스타일을 반영합니다. */}
+            <div id='container'>
                 {children}
             </div>
 
