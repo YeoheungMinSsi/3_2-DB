@@ -77,7 +77,7 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
     if (categoryType === 'SPIRIT_ONLY') {
         pageTitle = '🍸 기주 종류 (Base Spirits - 증류주)';
     } else {
-        pageTitle = '🍾 주류 타입 분류 (Type of Alcohol)';
+        pageTitle = '🍾 주류 분류 (Type of Alcohol)';
     }
 
     // 💡 대분류 이름을 변환하는 헬퍼 함수
