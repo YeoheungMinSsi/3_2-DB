@@ -27,7 +27,7 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(babel-runtime@5.8.38)(react@19.2.0)
       react-router-dom:
-        specifier: ^7.9.2
+        specifier: ^7.10.0
         version: 7.10.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@eslint/js':
