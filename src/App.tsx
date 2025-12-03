@@ -1,29 +1,32 @@
 // src/App.tsx
 
 import React from 'react';
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-// 💡 [컴포넌트] 새로 분리한 Nav와 Home, 404 페이지
+// 💡 [컴포넌트]
 import Nav from './components/Nav';
 import Home from './components/Home';
 import NotFoundContent from './components/NotFoundContent';
-
-// 💡 [훅] 새로 분리한 로직 훅
-import { useCocktailData } from './hooks/useCocktailData';
-import { useRouting } from './hooks/useRouting';
-
-// 💡 [기존] 페이지 컴포넌트 Import 유지
 import CocktailListPage from './components/CocktailListPage';
 import DrinkCategoryPage from './components/DrinkCategoryPage';
 import ToolsPage from './components/ToolsPage';
 import TechniquesPage from './components/TechniquesPage';
 import RelatedPage from './components/RelatedPage';
+import CocktailClassificationPage from './components/CocktailClassificationPage';
 
-// MainApp 컴포넌트는 이제 로직을 Hook으로 위임합니다.
+// 💡 [훅]
+import { useCocktailData } from './hooks/useCocktailData';
+import { useRouting } from './hooks/useRouting';
+
+// 💡 [설정] 라우트 목록만 임포트
+import { allRoutes } from './config/menuRoutes';
+
+
+// MainApp 컴포넌트: 로직은 Hook으로, 설정은 Config로 위임되어 간결해졌습니다.
 const MainApp: React.FC = () => {
   // 1. 라우팅 로직 사용
-  const { navigateTo, allRoutes, drinkMenuGroups, bartendingMenuGroups } = useRouting();
+  const { navigateTo, drinkMenuGroups, bartendingMenuGroups } = useRouting();
 
   // 2. 데이터/상태 로직 사용
   const {
@@ -32,9 +35,9 @@ const MainApp: React.FC = () => {
     isLoading,
     isError,
     handleCardClick
-  } = useCocktailData(navigateTo); // navigateTo를 훅에 전달
+  } = useCocktailData(navigateTo);
 
-  // 💡 [조건부 렌더링]
+  // 로딩 UI는 별도 컴포넌트(StatusIndicator)로 분리 가능하나, 현재 App.tsx에 유지합니다.
   if (isLoading) {
     return (
       <div className='w-full max-w-[1440px] mx-auto flex justify-center items-center p-16 min-h-[500px]'>
@@ -44,19 +47,18 @@ const MainApp: React.FC = () => {
     );
   }
 
-  // 💡 [메인 렌더링]
   return (
     <div id='main'>
-      {/* 1. Nav 컴포넌트: 라우팅 훅에서 가져온 메뉴와 navigateTo 전달 */}
+      {/* 1. Nav 컴포넌트: 메뉴 설정과 네비게이션 함수를 전달 */}
       <Nav
-        navigateTo={navigateTo}
+        navigateTo={navigateTo as any}
         drinkMenuGroups={drinkMenuGroups}
         bartendingMenuGroups={bartendingMenuGroups}
       />
 
       <div id='container'>
-        {/* 2. Routes: 훅에서 관리하는 상태를 페이지 컴포넌트에 Props로 전달 */}
         <Routes>
+          {/* 2. 홈 라우트 */}
           <Route
             path="/"
             element={
@@ -69,33 +71,46 @@ const MainApp: React.FC = () => {
             }
           />
 
-          {/* 3. 나머지 라우트: allRoutes를 기반으로 동적으로 구성하는 것이 이상적이나,
-                           현재 구조를 유지하며 모든 라우트 항목을 명시적으로 연결합니다. */}
-          {allRoutes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              element={
-                route.pageId === 'COCKTAIL_INFO_PAGE' ? <CocktailListPage cocktails={allCocktails} /> :
-                  route.pageId === 'DRINK_CATEGORY' ? <DrinkCategoryPage categoryType={route.categoryType || 'GENERAL'} /> :
-                    route.pageId === 'TOOLS' ? <ToolsPage /> :
-                      route.pageId === 'TECHNIQUES' ? <TechniquesPage /> :
-                        route.pageId === 'RELATED' ? <RelatedPage /> :
-                          <NotFoundContent navigateTo={navigateTo} />
-              }
-            />
-          ))}
+          {/* 3. 동적 라우트 등록: 설정 파일(allRoutes)을 기반으로 순회 */}
+          {allRoutes.map((route, index) => {
+            let element;
 
-          <Route path="*" element={<NotFoundContent navigateTo={navigateTo} />} />
+            // PageId에 따라 렌더링할 컴포넌트를 결정합니다.
+            switch (route.pageId) {
+              case 'COCKTAIL_INFO_PAGE':
+                element = <CocktailListPage cocktails={allCocktails} />;
+                break;
+              case 'DRINK_CATEGORY':
+                element = <DrinkCategoryPage categoryType={route.categoryType || 'GENERAL'} />;
+                break;
+              case 'COCKTAIL_CLASSIFICATION': // 💡 새 case 추가 및 컴포넌트 연결
+                element = <CocktailClassificationPage />;
+                break;
+              case 'TOOLS':
+                element = <ToolsPage />;
+                break;
+              case 'TECHNIQUES':
+                element = <TechniquesPage />;
+                break;
+              case 'RELATED':
+                element = <RelatedPage />;
+                break;
+              default:
+                element = <NotFoundContent navigateTo={navigateTo as any} />;
+            }
+
+            return <Route key={index} path={route.path} element={element} />;
+          })}
+
+          {/* 4. 404 폴백 라우트 */}
+          <Route path="*" element={<NotFoundContent navigateTo={navigateTo as any} />} />
         </Routes>
       </div>
-      {/* Footer는 App.tsx에 없었으므로 추가하지 않습니다. */}
     </div>
   );
 }
 
 
-// 💡 [최종] AppWrapper 유지
 const AppWrapper: React.FC = () => (
   <BrowserRouter>
     <MainApp />

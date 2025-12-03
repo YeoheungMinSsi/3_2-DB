@@ -1,22 +1,10 @@
 // src/hooks/useCocktailData.ts
-
 import { useState, useEffect } from 'react';
-
-// App.tsx에서 정의된 타입 복사 (별도 파일로 분리하는 것이 이상적)
-interface CocktailData {
-    cocktail_id: number;
-    name_kr: string;
-    name_en: string;
-    ingredients: string[];
-    ingredients_kr: string[];
-    method_kr: string;
-    category: string;
-    calculated_abv?: string;
-}
+import type { CocktailData, Page } from '../types/cocktail'; // 💡 타입 임포트 수정
 
 const API_URL = 'http://localhost:3000/cocktails';
 
-export const useCocktailData = (navigateTo: (pageId: string) => void) => {
+export const useCocktailData = (navigateTo: (pageId: Page) => void) => {
     const [allCocktails, setAllCocktails] = useState<CocktailData[]>([]);
     const [currentCocktail, setCurrentCocktail] = useState<CocktailData | null>(null);
     const [isLoading, setIsLoading] = useState(true);
