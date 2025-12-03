@@ -117,7 +117,7 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
 
     return (
         // 레이아웃 문제 해결을 위해 max-w-6xl mx-auto는 제거하고 w-full만 사용합니다.
-        <div className="bg-white shadow-xl rounded-lg w-full">
+        <div className="bg-white shadow-xl rounded-lg w-full" id="cocktail-list-page">
             {/* 💡 내부 패딩/마진을 위한 래퍼 */}
             <div className="p-8 mt-8">
                 <h1 className="text-3xl font-bold text-gray-800 border-b pb-2 mb-6">

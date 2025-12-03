@@ -1,14 +1,7 @@
 // src/components/CocktailClassificationPage.tsx
 import React, { useState, useEffect } from 'react';
-
-// classification.json의 구조에 맞는 타입 정의
-interface ClassificationStyle {
-    serving_styles_id: number;
-    styles_name: { kr: string, en: string };
-    feature: string[];
-    //iba_cocktail_examples_en 등의 불일치를 수정했다는 가정 하에 iba_cocktail_examples만 사용
-    iba_cocktail_examples: { kr: string[], en: string[] };
-}
+import type { ClassificationStyle } from '../types/cocktail'; // 💡 타입 임포트
+import '../App.css'
 
 const API_URL = 'http://localhost:3000/cocktail-styles';
 
@@ -22,15 +15,24 @@ const CocktailClassificationPage: React.FC = () => {
             try {
                 const response = await fetch(API_URL);
 
+                // 💡 [수정] 304 Not Modified 응답 처리: 본문 파싱을 건너뜁니다.
+                if (response.status === 304) {
+                    // 304는 성공적인 캐시 사용을 의미하며, 데이터가 변경되지 않았다는 뜻입니다.
+                    // 이전에 로드된 styles 상태를 유지하고 로딩만 종료합니다.
+                    setIsLoading(false);
+                    return;
+                }
+
                 if (!response.ok) {
                     throw new Error(`API 호출 실패 (HTTP 상태 코드: ${response.status})`);
                 }
 
+                // 200 OK 응답일 경우에만 JSON 파싱 진행
                 const data: ClassificationStyle[] = await response.json();
                 setStyles(data);
             } catch (err) {
                 console.error("칵테일 분류 데이터 로드 중 오류 발생:", err);
-                setError(`데이터 로드 중 오류 발생. 백엔드(NestJS) 서버 상태 및 CORS 설정을 확인하세요.`);
+                setError(`데이터 로드 중 오류 발생. NestJS 서버 상태 및 CORS 설정을 확인하세요.`);
             } finally {
                 setIsLoading(false);
             }
@@ -51,11 +53,12 @@ const CocktailClassificationPage: React.FC = () => {
     }
 
     return (
-        <div className='content p-8'>
-            <h1 className="text-3xl font-extrabold text-center mb-10 text-neutral-content">
-                🍹 기능별 칵테일 분류 (API 연동)
-            </h1>
-
+        <div className='content p-8' id ='cocktail-classification-page'>
+            <div id='cocktail-classification-page-name'>
+                <h1 className="text-3xl font-extrabold text-center">
+                    🍹 기능별 칵테일 분류
+                </h1>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {styles.map((style) => (
                     <div key={style.serving_styles_id} className="card bg-base-100 shadow-xl border border-gray-200">

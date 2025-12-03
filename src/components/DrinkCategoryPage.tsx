@@ -112,7 +112,7 @@ const DrinkCategoryPage: React.FC<DrinkCategoryPageProps> = ({ categoryType }) =
 
     return (
         // 💡 [수정]: max-w-7xl mx-auto 제거하고 w-full만 사용합니다.
-        <div className="p-8 bg-white shadow-xl rounded-lg mt-8 w-full">
+        <div className="p-8 bg-white shadow-xl rounded-lg mt-8 w-full" id="drink-category-page">
             <h1 className="text-3xl font-bold text-gray-800 border-b pb-2 mb-6">{pageTitle}</h1>
 
             {/* 💡 [3단 레이아웃] w-1/4, w-1/4, w-1/2 분할 */}

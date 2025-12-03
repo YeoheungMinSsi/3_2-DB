@@ -66,9 +66,15 @@ body {
 
 /* content 영역 수정: 카드와 정보 박스를 가로로 배치 */
 #container {
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding-left: 32px;
   padding-right: 32px;
+}
+#drink-category-page, #cocktail-list-page{
+
+  width: 1440px;
 }
 
 .content{
@@ -102,4 +108,15 @@ body {
 
 .hero-card{
   height: 8rem;
+}
+
+#cocktail-classification-page{
+  display: flex;
+  flex-direction: column;
+  
+  #cocktail-classification-page-name{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+  }
 }
