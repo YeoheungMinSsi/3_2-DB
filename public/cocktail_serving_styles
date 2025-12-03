@@ -1,0 +1,241 @@
+[
+    {
+        "serving_styles_id": 1,
+        "styles_name": {
+            "kr": "올 데이",
+            "en": "ALL DAY"
+        },
+        "feature": [
+            "하루 중 언제든지 가볍게 또는 즐겁게 마시기 좋은 칵테일",
+            "산뜻하거나 균형 잡힌 맛을 가짐",
+            "가장 많은 칵테일이 이 분류에 속함"
+        ],
+        "iba_cocktail_examples": {
+            "kr": [
+                "코스모폴리탄",
+                "모히토",
+                "피나 콜라다",
+                "다이키리",
+                "김렛",
+                "좀비",
+                "사이드카",
+                "비즈 니즈",
+                "마가리타",
+                "모스코 뮬",
+                "화이트 레이디",
+                "브램블",
+                "카이피리냐",
+                "페르난디토"
+            ],
+            "en": [
+                "COSMOPOLITAN",
+                "MOJITO",
+                "PINA COLADA",
+                "DAIQUIRI",
+                "GIMLET",
+                "ZOMBIE",
+                "SIDECAR",
+                "BEE'S KNEES",
+                "MARGARITA",
+                "MOSCOW MULE",
+                "WHITE LADY",
+                "BRAMBLE",
+                "CAIPIRINHA",
+                "FERNANDITO"
+            ]
+        }
+    },
+    {
+        "serving_styles_id": 2,
+        "styles_name": {
+            "kr": "식전주",
+            "en": "BEFORE DINNER"
+        },
+        "feature": [
+            "식욕을 돋우는 기능이 주목적인 칵테일",
+            "드라이(Dry)하거나 쌉싸름한(Bitter) 맛을 가짐"
+        ],
+        "iba_cocktail_examples_en": {
+            "kr": [
+                "드라이 마티니",
+                "네그로니",
+                "올드 패션드",
+                "맨해튼",
+                "아메리카노",
+                "위스키 사워",
+                "베스퍼",
+                "불바디에",
+                "사제락",
+                "카지노",
+                "클로버 클럽",
+                "파라다이스",
+                "행키팽키"
+            ],
+            "en": [
+                "DRY MARTINI",
+                "NEGRONI",
+                "OLD FASHIONED",
+                "MANHATTAN",
+                "AMERICANO",
+                "WHISKEY SOUR",
+                "VESPER",
+                "BOULEVARDIER",
+                "SAZERAC",
+                "CASINO",
+                "CLOVER CLUB",
+                "PARADISE",
+                "HANKY PANKY"
+            ]
+        }
+    },
+    {
+        "serving_styles_id": 3,
+        "styles_name:": {
+            "kr": "식후주",
+            "en": "AFTER DINNER"
+        },
+        "feature": [
+            "식사를 마무리하고 소화를 돕는 기능이 있는 칵테일",
+            "달콤하거나 풍부하고 진한 맛을 가짐"
+        ],
+        "iba_cocktail_examples": {
+            "kr": [
+                "블랙 러시안",
+                "알렉산더",
+                "에스프레소 마티니",
+                "그래스호퍼",
+                "러스티 네일",
+                "프렌치 커넥션",
+                "갓 파더",
+                "B-52",
+                "포르토 플립",
+                "스틴거"
+            ],
+            "en": [
+                "BLACK RUSSIAN",
+                "ALEXANDER",
+                "ESPRESSO MARTINI",
+                "GRASSHOPPER",
+                "RUSTY NAIL",
+                "FRENCH CONNECTION",
+                "GODFATHER",
+                "B-52",
+                "PORTO FLIP",
+                "STINGER"
+            ]
+        }
+    },
+    {
+        "serving_styles_id": 4,
+        "styles_name": {
+            "kr": "롱 드링크",
+            "en": "LONG DRINK"
+        },
+        "feature": [
+            "용량이 큭 얼음이 많아 천천히, 오래마시기 좋은 칵테일",
+            "청량감을 주는 칵테일"
+        ],
+        "iba_cocktail_examples": {
+            "kr": [
+                "롱 아일랜드 아이스 티",
+                "쿠바 리브레",
+                "진 피즈",
+                "톰 콜린스",
+                "존 콜린스",
+                "데킬라 선라이즈",
+                "싱가폴 슬링",
+                "블러디 메리"
+            ],
+            "en": [
+                "LONG ISLAND ICED TEA",
+                "CUBA LIBRE",
+                "GIN FIZZ",
+                "TOM COLLINS",
+                "JOHN COLLINS",
+                "TEQUILA SUNRISE",
+                "SINGAPORE SLING",
+                "BLOODY MARY"
+            ]
+        }
+    },
+    {
+        "serving_styles_id": 5,
+        "styles_name": {
+            "kr": "스파클링",
+            "en": "SPARKLING"
+        },
+        "feature": [
+            "샴페인, 프로세코 또는 탄산수 등 탄산음료를 사용한 칵테일",
+            "탄산음료를 사용하여 탄삼감이 특징인 칵테일"
+        ],
+        "iba_cocktail_examples": {
+            "kr": [
+                "키르 로열",
+                "벨리니",
+                "프렌치 75",
+                "미모사",
+                "아페롤 스프리츠",
+                "클래식 샴페인 칵테일"
+            ],
+            "en": [
+                "CHAMPAGNE COCKTAIL",
+                "KIR ROYALE",
+                "BELLINI",
+                "FRENCH 75",
+                "MIMOSA",
+                "APEROL SPRITZ",
+                "CLASSIC CHAMPAGNE COCKTAIL"
+            ]
+        }
+    },
+    {
+        "serving_styles_id": 6,
+        "styles_name": {
+            "kr": "마티니 스타일",
+            "en": "MARTINIS STYLE"
+        },
+        "feature": [
+            "술 중심(Spirit-Forward)의 칵테일",
+            "일반적으로 칵테일 잔에 얼음 없이 차갑게 서빙됨",
+            "식전주와 중복되는 경우가 많음"
+        ],
+        "iba_cocktail_examples": {
+            "kr": [
+                "드라이 마티니",
+                "베스퍼",
+                "마르티네즈",
+                "턱시도",
+                "더티 마니티"
+            ],
+            "en": [
+                "DRY MARTINI",
+                "VESPER",
+                "MARTINI",
+                "TUXEDO",
+                "DIRTY MARTINI"
+            ]
+        }
+    },
+    {
+        "serving_styles_id": 7,
+        "styles_name": {
+            "kr": "핫 드링크",
+            "en": "HOT DRINK"
+        },
+        "feature": [
+            "따뜻하게 데워 마시는 칵테일",
+            "추운 계절에 즐기는 것을 목적"
+        ],
+        "iba_cocktail_examples": {
+            "kr": [
+                "아이리시 커피",
+                "핫 토디"
+            ],
+            "en": [
+                "IRISH COFFEE",
+                "HOT TODDY"
+            ]
+
+        }
+    }
+]

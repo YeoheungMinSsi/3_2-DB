@@ -1,10 +1,22 @@
+요청하신 대로, 기존 칵테일 잔 목록에 비어 있던 `sub_categories`를 채우고, 대화에서 제안된 IBA 칵테일 정보와 서빙 방식을 포함하는 필드를 추가하여 JSON 형태의 코드를 작성했습니다.
+
+새로 추가된 필드는 다음과 같습니다.
+
+*   `iba_cocktail_examples_kr`, `iba_cocktail_examples_en`: 해당 잔에 담아 서빙되는 IBA 공식 칵테일 예시.
+*   `serving_styles_kr`, `serving_styles_en`: 해당 잔에 주로 담기는 칵테일 스타일 (IBA 분류 기반).
+*   `serve_temperature_kr`, `serve_temperature_en`: 음료의 표준 온도 및 서빙 방식.
+*   `ice_method_kr`, `ice_method_en`: 얼음 사용 방식 (예: 얼음 없음, 온더락, 크러쉬 아이스).
+
+**참고:** IBA 소스에서 칵테일 서빙에 사용되는 잔의 명칭(`cocktail glass`, `highball glass`, `old fashioned glass`, `flute glass` 등)과 칵테일 스타일(`SPARKLING`, `LONG DRINK`, `AFTER DINNER` 등)을 직접적으로 추출하여 매핑했습니다.
+
+```json
 [
   {
     "glass_id": 1,
     "name_en": "Flute Glass",
     "name_kr": "플루트 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "스파클링 와인 잔",
+    "sub_categories_en": "Sparkling Wine Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "120ml~180ml",
@@ -13,7 +25,27 @@
       "길고 얇으며, 잔 입구가 좁음",
       "높고 좁은 형태로 인해 탄산이 오래 유지",
       "탄산을 오래 보존하고 기포가 올라오는 것을 보기 위함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "벨리니",
+      "프렌치 75",
+      "미모사"
+    ],
+    "iba_cocktail_examples_en": [
+      "BELLINI",
+      "FRENCH 75",
+      "MIMOSA"
+    ],
+    "serving_styles_kr": [
+      "스파클링"
+    ],
+    "serving_styles_en": [
+      "SPARKLING"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음 (차갑게 보관 후 따름)",
+    "ice_method_en": "No Ice (Chilled Glass)"
   },
   {
     "glass_id": 2,
@@ -34,7 +66,29 @@
     "expain_kr": [
       "바닥이 두껍고, 입구가 넓고, 높이가 낮음",
       "전통적인 크기로 클래식을 즐길 때 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "올드 패션드",
+      "아메리카노",
+      "러스티 네일"
+    ],
+    "iba_cocktail_examples_en": [
+      "OLD FASHIONED",
+      "AMERICANO",
+      "RUSTY NAIL"
+    ],
+    "serving_styles_kr": [
+      "식전주",
+      "식후주"
+    ],
+    "serving_styles_en": [
+      "BEFORE DINNER",
+      "AFTER DINNER"
+    ],
+    "serve_temperature_kr": "차갑게 (온더락)",
+    "serve_temperature_en": "Chilled (On the Rocks)",
+    "ice_method_kr": "얼음 채움 (온더락)",
+    "ice_method_en": "Ice Cubes (On the Rocks)"
   },
   {
     "glass_id": 3,
@@ -55,14 +109,36 @@
     "expain_kr": [
       "오늘날 Bar 또는 가정에서 가장 흔하게 사용되는 올드 패션드 잔",
       "오늘날 칵테일을 더 크게 만들거나, 잔 안에 큰 얼음을 넣는 것이 유행하면서 싱글 올드 패션드 잔에서 얼음을 충분히 담을 수 있는 더블 사이즈가 대중화 되었음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "카이피리냐",
+      "마이타이",
+      "페르난디토"
+    ],
+    "iba_cocktail_examples_en": [
+      "CAIPIRINHA",
+      "MAI-TAI",
+      "FERNANDITO"
+    ],
+    "serving_styles_kr": [
+      "올 데이",
+      "롱 드링크"
+    ],
+    "serving_styles_en": [
+      "ALL DAY",
+      "LONG DRINK"
+    ],
+    "serve_temperature_kr": "차갑게 (온더락)",
+    "serve_temperature_en": "Chilled (On the Rocks)",
+    "ice_method_kr": "얼음 채움 (크러쉬 또는 큐브)",
+    "ice_method_en": "Cracked/Ice Cubes (On the Rocks)"
   },
   {
     "glass_id": 4,
     "name_en": "Coupe Glass",
     "name_kr": "쿱 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "업스타일 칵테일 잔",
+    "sub_categories_en": "Up-style Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "150ml~240ml",
@@ -71,14 +147,34 @@
       "볼이 넓고 얕으며, 잔 입구가 넓게 벌어짐",
       "전통적으로 샴페인에 사용되었으나, 현대에는 얼음 없이 차갑게 즐기는 칵테일(업스타일)에 주로 사용",
       "넓은 입구로 인해 탄산이 빨리 날아가는 단점이 있음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "샴페인 칵테일",
+      "키르 로열 (샴페인 버전)"
+    ],
+    "iba_cocktail_examples_en": [
+      "CHAMPAGNE COCKTAIL",
+      "KIR ROYAL"
+    ],
+    "serving_styles_kr": [
+      "식전주",
+      "스파클링"
+    ],
+    "serving_styles_en": [
+      "BEFORE DINNER",
+      "SPARKLING"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음 (칵테일 글라스와 유사)",
+    "ice_method_en": "Up-style (No Ice)"
   },
   {
     "glass_id": 5,
     "name_en": "Highball Glass",
     "name_kr": "하이볼 잔",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "롱 드링크 잔",
+    "sub_categories_en": "Long Drink Glass",
     "categories_kr": "텀블러",
     "categories_en": "Tumbler",
     "avg_volume_ml": "240ml~350ml",
@@ -86,14 +182,36 @@
     "expain_kr": [
       "길고 직선적인 원통형의 잔",
       "하이볼 칵테일(위스키 + 탄산수), 진토닉, 럼콕 등 얼음과 믹서가 많이 들어가는 칵테일에 다목적으로 가장 널리 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "쿠바 리브레",
+      "호스 넥",
+      "씨 브리즈"
+    ],
+    "iba_cocktail_examples_en": [
+      "CUBA LIBRE",
+      "HORSE'S NECK",
+      "SEA BREEZE"
+    ],
+    "serving_styles_kr": [
+      "롱 드링크",
+      "올 데이"
+    ],
+    "serving_styles_en": [
+      "LONG DRINK",
+      "ALL DAY"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 (빌드)",
+    "ice_method_en": "Ice Cubes (Built)"
   },
   {
     "glass_id": 6,
     "name_en": "Collins Glass",
     "name_kr": "콜린스 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "긴 용량 롱 드링크 잔",
+    "sub_categories_en": "Tall Long Drink Glass",
     "categories_kr": "텀블러",
     "categories_en": "Tumbler",
     "avg_volume_ml": "350ml~410ml",
@@ -101,14 +219,32 @@
     "expain_kr": [
       "길고 좁은 원통형으로 하이볼 잔보다 더 가늘고 높음",
       "톰 콜린스, 존 콜린스와 같이 긴 용량이 필요한 롱 드링크(Long Drink) 칵테일에 적합함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "존 콜린스",
+      "서퍼링 바스타드"
+    ],
+    "iba_cocktail_examples_en": [
+      "JOHN COLLINS",
+      "SUFFERING BASTARD"
+    ],
+    "serving_styles_kr": [
+      "롱 드링크"
+    ],
+    "serving_styles_en": [
+      "LONG DRINK"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 (빌드)",
+    "ice_method_en": "Ice Cubes (Built)"
   },
   {
     "glass_id": 7,
     "name_en": "Glencairn Glass",
     "name_kr": "글렌캐런 글라스",
-    "sub_categories_kr": "위스키 잔",
-    "sub_categories_en": "Whisky Glass",
+    "sub_categories_kr": "위스키 시음 잔",
+    "sub_categories_en": "Whisky Tasting Glass",
     "categories_kr": "스니프터/튤립형",
     "categories_en": "Snifter/Tulip",
     "avg_volume_ml": "175ml~200ml",
@@ -117,14 +253,30 @@
       "아래는 넓고 위로 갈수록 좁아지는 튤립 형태",
       "위스키 시음(Tasting)을 위해 특별히 고안된 잔으로 향을 코로 집중시켜주어 풍미를 잘 느낄 수 있음",
       "물이나 얼음을 섞지 않은 스트레이트 위스키에 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (시음 전용)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Tasting Glass)"
+    ],
+    "serving_styles_kr": [
+      "시음/스트레이트"
+    ],
+    "serving_styles_en": [
+      "Tasting/Neat"
+    ],
+    "serve_temperature_kr": "실온",
+    "serve_temperature_en": "Room Temperature",
+    "ice_method_kr": "얼음 없음 (니트)",
+    "ice_method_en": "Neat (No Ice)"
   },
   {
     "glass_id": 8,
     "name_en": "Martini Glass",
     "name_kr": "마티니 잔",
-    "sub_categories_kr": "칵테일 잔",
-    "sub_categories_en": "Cocktail Glass",
+    "sub_categories_kr": "업스타일 칵테일 잔",
+    "sub_categories_en": "Up-style Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "120ml~180ml",
@@ -133,14 +285,46 @@
       "원뿔(역삼각) 모양의 볼과 긴 잔대를 가진 클래식한 디자인",
       "마티니, 맨해튼 등 얼음 없이 차갑게 즐기는 칵테일(업스타일)에 주로 사용",
       "잔대가 손의 온기로부터 내용물을 보호하여 차가운 상태를 유지하게 도움"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "드라이 마티니",
+      "베스퍼",
+      "코스모폴리탄",
+      "맨해튼",
+      "사이드카",
+      "화이트 레이디"
+    ],
+    "iba_cocktail_examples_en": [
+      "DRY MARTINI",
+      "VESPER",
+      "COSMOPOLITAN",
+      "MANHATTAN",
+      "SIDECAR",
+      "WHITE LADY"
+    ],
+    "serving_styles_kr": [
+      "마티니",
+      "올 데이",
+      "식전주",
+      "식후주"
+    ],
+    "serving_styles_en": [
+      "MARTINIS",
+      "ALL DAY",
+      "BEFORE DINNER",
+      "AFTER DINNER"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 없음 (스트레인/업스타일)",
+    "ice_method_en": "Strained (Up-style)"
   },
   {
     "glass_id": 9,
     "name_en": "Shot Glass",
     "name_kr": "샷 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "샷/계량 잔",
+    "sub_categories_en": "Shot/Measuring Glass",
     "categories_kr": "텀블러",
     "categories_en": "Tumbler",
     "avg_volume_ml": "30ml~60ml",
@@ -148,14 +332,32 @@
     "expain_kr": [
       "작고 두꺼운 바닥을 가진 잔",
       "주류를 한 번에 마시는 용도(샷) 또는 칵테일 제조 시 계량컵 대용으로 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (계량 또는 샷 전용)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Measuring/Shots)"
+    ],
+    "serving_styles_kr": [
+      "샷",
+      "식후주"
+    ],
+    "serving_styles_en": [
+      "SHOTS",
+      "DIGESTIF"
+    ],
+    "serve_temperature_kr": "차가움 또는 실온",
+    "serve_temperature_en": "Cold or Room Temp",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "Neat"
   },
   {
     "glass_id": 10,
     "name_en": "Snifter",
     "name_kr": "스니프터",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "브랜디/코냑 향 집중 잔",
+    "sub_categories_en": "Brandy/Cognac Aroma Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "180ml~240ml",
@@ -163,14 +365,32 @@
     "expain_kr": [
       "볼이 넓고 입구가 좁으며, 짧은 잔대가 있음",
       "브랜디, 코냑 등 향이 진한 주류의 향을 모으고 손의 온기로 내용물을 살짝 데워주는 효과가 있음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "프렌치 커넥션 (변형 가능)"
+    ],
+    "iba_cocktail_examples_en": [
+      "FRENCH CONNECTION (Variant)"
+    ],
+    "serving_styles_kr": [
+      "식후주",
+      "니트"
+    ],
+    "serving_styles_en": [
+      "AFTER DINNER",
+      "NEAT"
+    ],
+    "serve_temperature_kr": "실온 (손의 온기로 가열)",
+    "serve_temperature_en": "Room Temperature",
+    "ice_method_kr": "얼음 없음 (니트)",
+    "ice_method_en": "Neat (No Ice)"
   },
   {
     "glass_id": 11,
     "name_en": "Hurricane Glass",
     "name_kr": "허리케인 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "트로피컬 칵테일 잔",
+    "sub_categories_en": "Tropical Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "300ml~600ml",
@@ -178,14 +398,32 @@
     "expain_kr": [
       "볼 부분이 곡선으로 부풀어 오른 긴 잔",
       "트로피컬 칵테일(예: 허리케인 칵테일, 피냐 콜라다)처럼 얼음과 가니쉬가 많이 들어가 양이 많은 칵테일에 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "싱가포르 슬링"
+    ],
+    "iba_cocktail_examples_en": [
+      "SINGAPORE SLING"
+    ],
+    "serving_styles_kr": [
+      "롱 드링크",
+      "트로피컬"
+    ],
+    "serving_styles_en": [
+      "LONG DRINK",
+      "TROPICAL"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 (또는 크러쉬 아이스)",
+    "ice_method_en": "Ice Cubes or Crushed Ice"
   },
   {
     "glass_id": 12,
     "name_en": "Irish Coffee Glass",
     "name_kr": "아이리시 커피 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "뜨거운 주류 음료 잔",
+    "sub_categories_en": "Hot Alcoholic Drink Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "240ml~300ml",
@@ -193,14 +431,30 @@
     "expain_kr": [
       "뜨거운 음료를 담기 위해 내열 유리로 제작되며, 짧은 잔대와 손잡이가 있거나 스템 형태로 된 경우가 있음",
       "아이리시 커피, 핫 토디 등 뜨거운 주류 음료를 담는 데 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "아이리시 커피"
+    ],
+    "iba_cocktail_examples_en": [
+      "IRISH COFFEE"
+    ],
+    "serving_styles_kr": [
+      "핫 드링크"
+    ],
+    "serving_styles_en": [
+      "HOT DRINK"
+    ],
+    "serve_temperature_kr": "뜨겁게",
+    "serve_temperature_en": "Hot",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "No Ice"
   },
   {
     "glass_id": 13,
     "name_en": "Poco Grande Glass",
     "name_kr": "포코 그란데 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "프로즌/트로피컬 칵테일 잔",
+    "sub_categories_en": "Frozen/Tropical Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "300ml~450ml",
@@ -208,14 +462,32 @@
     "expain_kr": [
       "허리케인 글라스와 비슷하지만, 볼 부분이 더 둥글고 잔대가 더 길며 곡선미가 있음",
       "대부분 피냐 콜라다(Piña Colada)와 같은 트로피컬 칵테일이나 프로즌 칵테일에 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "피냐 콜라다"
+    ],
+    "iba_cocktail_examples_en": [
+      "PINA COLADA"
+    ],
+    "serving_styles_kr": [
+      "롱 드링크",
+      "프로즌"
+    ],
+    "serving_styles_en": [
+      "LONG DRINK",
+      "FROZEN"
+    ],
+    "serve_temperature_kr": "프로즌",
+    "serve_temperature_en": "Frozen",
+    "ice_method_kr": "블렌딩된 얼음 (프로즌)",
+    "ice_method_en": "Blended Ice (Frozen)"
   },
   {
     "glass_id": 14,
     "name_en": "Mug (Hot Toddy Mug)",
     "name_kr": "머그 (핫 토디 머그)",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "따뜻한 계절 칵테일 머그",
+    "sub_categories_en": "Warm Seasonal Cocktail Mug",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "240ml~350ml",
@@ -223,14 +495,30 @@
     "expain_kr": [
       "손잡이가 달린 일반적인 컵 또는 머그 형태로, 주로 세라믹이나 두꺼운 유리로 제작됨",
       "핫 버터드 럼, 핫 토디 등 따뜻한 계절 칵테일이나 펀치류를 담아 손잡이를 잡고 마시기 편리함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (핫 토디 등 뜨거운 음료)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Hot Toddy etc.)"
+    ],
+    "serving_styles_kr": [
+      "핫 드링크"
+    ],
+    "serving_styles_en": [
+      "HOT DRINK"
+    ],
+    "serve_temperature_kr": "뜨겁게",
+    "serve_temperature_en": "Hot",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "No Ice"
   },
   {
     "glass_id": 15,
     "name_en": "Mule Mug",
     "name_kr": "뮬 머그",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "구리 뮬 머그",
+    "sub_categories_en": "Copper Mule Mug",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "350ml~470ml",
@@ -238,14 +526,30 @@
     "expain_kr": [
       "구리(Copper) 재질의 손잡이 달린 머그 형태",
       "주로 모스코 뮬(Moscow Mule)을 담는 데 사용되며, 구리의 특성상 음료를 매우 차갑게 유지해주는 효과가 있음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "모스코 뮬"
+    ],
+    "iba_cocktail_examples_en": [
+      "MOSCOW MULE"
+    ],
+    "serving_styles_kr": [
+      "올 데이"
+    ],
+    "serving_styles_en": [
+      "ALL DAY"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 (빌드)",
+    "ice_method_en": "Ice Cubes (Built)"
   },
   {
     "glass_id": 16,
     "name_en": "Pousse-Café Glass",
     "name_kr": "푸스 카페 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "레이어드 칵테일 잔",
+    "sub_categories_en": "Layered Cocktail Glass",
     "categories_kr": "텀블러/스페셜티",
     "categories_en": "Tumbler/Specialty",
     "avg_volume_ml": "60ml~120ml",
@@ -253,14 +557,32 @@
     "expain_kr": [
       "매우 길고 좁은 형태로, 샷 글라스보다 훨씬 높음",
       "색상과 비중이 다른 리큐어를 층층이 쌓는 푸스 카페(Pousse-Café) 칵테일 전용 잔"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (푸스 카페 전용)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Pousse-Café Specific)"
+    ],
+    "serving_styles_kr": [
+      "레이어드",
+      "식후주"
+    ],
+    "serving_styles_en": [
+      "LAYERED",
+      "AFTER DINNER"
+    ],
+    "serve_temperature_kr": "차갑게 또는 실온",
+    "serve_temperature_en": "Chilled or Room Temp",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "Neat"
   },
   {
     "glass_id": 17,
     "name_en": "Port Wine Glass",
     "name_kr": "포트 와인 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "주정 강화 와인 잔",
+    "sub_categories_en": "Fortified Wine Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "120ml~180ml",
@@ -268,14 +590,32 @@
     "expain_kr": [
       "와인 잔과 비슷하지만 볼이 작고 스템이 짧으며, 잔 입구가 좁음",
       "주로 포트 와인이나 셰리 등 주정 강화 와인의 향을 집중시키고, 적당량을 마시는 데 적합함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (와인/식후주 전용)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Wine/Digestif Specific)"
+    ],
+    "serving_styles_kr": [
+      "식후주",
+      "니트"
+    ],
+    "serving_styles_en": [
+      "AFTER DINNER",
+      "NEAT"
+    ],
+    "serve_temperature_kr": "실온 또는 살짝 차갑게",
+    "serve_temperature_en": "Room Temp or Slightly Chilled",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "Neat (No Ice)"
   },
   {
     "glass_id": 18,
     "name_en": "Delmonico Glass",
     "name_kr": "델모니코 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "소용량 업스타일 칵테일 잔",
+    "sub_categories_en": "Small Up-style Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "120ml~150ml",
@@ -283,14 +623,32 @@
     "expain_kr": [
       "쿱 글라스와 마티니 글라스의 중간 형태로, 볼 부분이 얕고 둥글지만 마티니 잔처럼 위로 약간 벌어지는 형태를 가짐",
       "클래식 칵테일이나 샴페인 서빙에 사용되며, 작은 용량의 업스타일 칵테일에 적합함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (소형 클래식 칵테일)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Small Classic Cocktails)"
+    ],
+    "serving_styles_kr": [
+      "식전주",
+      "마티니"
+    ],
+    "serving_styles_en": [
+      "BEFORE DINNER",
+      "MARTINI"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음 (업스타일)",
+    "ice_method_en": "Up-style (No Ice)"
   },
   {
     "glass_id": 19,
     "name_en": "Sour Glass",
     "name_kr": "샤워 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "샤워 스타일 칵테일 잔",
+    "sub_categories_en": "Sour Style Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "150ml~240ml",
@@ -298,14 +656,32 @@
     "expain_kr": [
       "작은 와인 잔과 비슷한 튤립 모양의 볼과 짧은 잔대를 가짐",
       "위스키 샤워, 아마레토 샤워 등 '샤워(Sour)' 스타일 칵테일을 위한 클래식 잔으로 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "피스코 사워"
+    ],
+    "iba_cocktail_examples_en": [
+      "PISCO SOUR"
+    ],
+    "serving_styles_kr": [
+      "올 데이",
+      "샤워"
+    ],
+    "serving_styles_en": [
+      "ALL DAY",
+      "SOUR"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음 (업스타일)",
+    "ice_method_en": "Up-style (No Ice)"
   },
   {
     "glass_id": 20,
     "name_en": "Champagne Saucer",
     "name_kr": "샴페인 소서",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "복고풍 칵테일 잔",
+    "sub_categories_en": "Vintage Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "150ml~240ml",
@@ -313,14 +689,34 @@
     "expain_kr": [
       "볼이 넓고 얕은 형태이며 쿱 글라스(Coupe Glass)와 동일한 잔을 일컫는 경우가 많음",
       "플루트 글라스가 개발되기 전까지 샴페인 잔으로 사용되었으며, 현재는 복고풍 칵테일 잔으로 활용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "샴페인 칵테일",
+      "알렉산더"
+    ],
+    "iba_cocktail_examples_en": [
+      "CHAMPAGNE COCKTAIL",
+      "ALEXANDER"
+    ],
+    "serving_styles_kr": [
+      "스파클링",
+      "식후주"
+    ],
+    "serving_styles_en": [
+      "SPARKLING",
+      "AFTER DINNER"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음 (업스타일)",
+    "ice_method_en": "Up-style (No Ice)"
   },
   {
     "glass_id": 21,
     "name_en": "Nick & Nora Glass",
     "name_kr": "닉 앤 노라 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "우아한 업스타일 칵테일 잔",
+    "sub_categories_en": "Elegant Up-style Cocktail Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "120ml~180ml",
@@ -328,14 +724,30 @@
     "expain_kr": [
       "쿱 글라스와 마티니 글라스의 장점을 결합한 형태로, 잔 입구가 좁아 내용물이 튀는 것을 방지",
       "클래식한 업스타일 칵테일(얼음 없이 차가운 칵테일)에 사용되며, 우아한 디자인이 특징"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "올드 쿠반"
+    ],
+    "iba_cocktail_examples_en": [
+      "OLD CUBAN"
+    ],
+    "serving_styles_kr": [
+      "올 데이"
+    ],
+    "serving_styles_en": [
+      "ALL DAY"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 없음 (업스타일)",
+    "ice_method_en": "Up-style (No Ice)"
   },
   {
     "glass_id": 22,
     "name_en": "Footed / Goblet Glass",
     "name_kr": "푸터 / 고블렛 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "대용량 스페셜티 잔",
+    "sub_categories_en": "Large Specialty Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "300ml~450ml",
@@ -343,14 +755,32 @@
     "expain_kr": [
       "넓고 둥근 볼과 튼튼한 잔대를 가진 큰 잔",
       "맥주, 샹그리아, 큰 용량의 스페셜티 칵테일, 혹은 얼음과 가니쉬가 많은 음료에 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "피스코 사워"
+    ],
+    "iba_cocktail_examples_en": [
+      "PISCO SOUR"
+    ],
+    "serving_styles_kr": [
+      "올 데이",
+      "스페셜티"
+    ],
+    "serving_styles_en": [
+      "ALL DAY",
+      "SPECIALTY"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음 (업스타일) 또는 얼음 채움",
+    "ice_method_en": "Up-style or Ice Cubes"
   },
   {
     "glass_id": 23,
     "name_en": "Irish Pub Mug",
     "name_kr": "아이리시 펍 머그",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "맥주/대용량 펀치 머그",
+    "sub_categories_en": "Beer/Large Punch Mug",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "400ml~600ml",
@@ -358,14 +788,32 @@
     "expain_kr": [
       "두꺼운 유리로 만들어져 내구성이 좋고 손잡이가 달린 큰 머그 형태",
       "주로 맥주(특히 에일이나 스타우트)를 담는 데 사용되지만, 차가운 펀치나 대용량 칵테일에도 사용될 수 있음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (맥주/펀치)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Beer/Punch)"
+    ],
+    "serving_styles_kr": [
+      "맥주",
+      "펀치"
+    ],
+    "serving_styles_en": [
+      "BEER",
+      "PUNCH"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 또는 없음",
+    "ice_method_en": "Ice Cubes or No Ice"
   },
   {
     "glass_id": 24,
     "name_en": "Parfait / Sundae Glass",
     "name_kr": "파르페 / 선데이 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "디저트/밀크쉐이크 칵테일 잔",
+    "sub_categories_en": "Dessert/Milkshake Cocktail Glass",
     "categories_kr": "스페셜티/스템웨어",
     "categories_en": "Specialty/Stemware",
     "avg_volume_ml": "240ml~350ml",
@@ -373,14 +821,32 @@
     "expain_kr": [
       "길고 좁은 형태로, 바닥이 두껍거나 잔대가 있는 경우가 많음",
       "주로 디저트(파르페, 아이스크림 선데이)에 사용되나, 레이어가 중요한 스페셜티 칵테일이나 밀크 쉐이크 형태의 칵테일에 활용되기도 함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (디저트 칵테일)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Dessert Cocktails)"
+    ],
+    "serving_styles_kr": [
+      "식후주",
+      "프로즌"
+    ],
+    "serving_styles_en": [
+      "AFTER DINNER",
+      "FROZEN"
+    ],
+    "serve_temperature_kr": "매우 차갑게/프로즌",
+    "serve_temperature_en": "Very Cold/Frozen",
+    "ice_method_kr": "크러쉬 아이스 또는 블렌딩",
+    "ice_method_en": "Crushed or Blended Ice"
   },
   {
     "glass_id": 25,
     "name_en": "Moscow Mule Glass (Copper)",
     "name_kr": "모스코 뮬 글라스 (구리 머그)",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "구리 뮬 머그",
+    "sub_categories_en": "Copper Mule Mug",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "350ml~500ml",
@@ -388,14 +854,32 @@
     "expain_kr": [
       "구리 재질의 손잡이 달린 머그 형태로, 특히 모스코 뮬 칵테일에 필수적으로 사용",
       "금속의 높은 열전도율 덕분에 잔 표면이 매우 차가워져 청량감을 극대화함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "모스코 뮬"
+    ],
+    "iba_cocktail_examples_en": [
+      "MOSCOW MULE"
+    ],
+    "serving_styles_kr": [
+      "올 데이",
+      "롱 드링크"
+    ],
+    "serving_styles_en": [
+      "ALL DAY",
+      "LONG DRINK"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 (빌드)",
+    "ice_method_en": "Ice Cubes (Built)"
   },
   {
     "glass_id": 26,
     "name_en": "Margarita Glass",
     "name_kr": "마가리타 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "마가리타 전용 잔",
+    "sub_categories_en": "Margarita Specific Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "240ml~350ml",
@@ -403,14 +887,34 @@
     "expain_kr": [
       "특유의 계단식 또는 이중 볼 모양을 가지며, 입구가 넓게 벌어지는 형태",
       "마가리타(Margarita) 칵테일 전용 잔으로, 넓은 입구에 소금을 림(Rim) 처리하기 용이함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "마가리타",
+      "토미스 마가리타"
+    ],
+    "iba_cocktail_examples_en": [
+      "MARGARITA",
+      "TOMMY’S MARGARITA"
+    ],
+    "serving_styles_kr": [
+      "올 데이",
+      "샤워"
+    ],
+    "serving_styles_en": [
+      "ALL DAY",
+      "SOUR"
+    ],
+    "serve_temperature_kr": "차갑게 또는 프로즌",
+    "serve_temperature_en": "Chilled or Frozen",
+    "ice_method_kr": "얼음 없음 (업스타일) 또는 크러쉬 아이스",
+    "ice_method_en": "Up-style or Crushed Ice"
   },
   {
     "glass_id": 27,
     "name_en": "Pilsner Glass",
     "name_kr": "필스너 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "라거 맥주/거품 칵테일 잔",
+    "sub_categories_en": "Lager/Frothy Cocktail Glass",
     "categories_kr": "텀블러",
     "categories_en": "Tumbler",
     "avg_volume_ml": "300ml~470ml",
@@ -418,14 +922,32 @@
     "expain_kr": [
       "길고 가늘며 위로 갈수록 약간 넓어지거나 곧게 뻗은 형태",
       "주로 필스너(Pilsner) 스타일의 라거 맥주에 사용되지만, 거품이 풍성한 대용량 칵테일에도 사용 가능"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (맥주/롱 드링크)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Beer/Long Drink)"
+    ],
+    "serving_styles_kr": [
+      "맥주",
+      "롱 드링크"
+    ],
+    "serving_styles_en": [
+      "BEER",
+      "LONG DRINK"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 또는 없음",
+    "ice_method_en": "Ice Cubes or No Ice"
   },
   {
     "glass_id": 28,
     "name_en": "Sling Glass",
     "name_kr": "슬링 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "싱가포르 슬링/대용량 잔",
+    "sub_categories_en": "Singapore Sling/Large Capacity Glass",
     "categories_kr": "텀블러",
     "categories_en": "Tumbler",
     "avg_volume_ml": "350ml~450ml",
@@ -433,14 +955,32 @@
     "expain_kr": [
       "하이볼 글라스보다 조금 더 둥글거나 곡선미가 있는 긴 잔",
       "싱가포르 슬링(Singapore Sling)과 같이 용량이 크고 장식이 많은 칵테일에 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "싱가포르 슬링 (허리케인 잔 대체 가능)"
+    ],
+    "iba_cocktail_examples_en": [
+      "SINGAPORE SLING (Hurricane Glass alternative)"
+    ],
+    "serving_styles_kr": [
+      "롱 드링크",
+      "트로피컬"
+    ],
+    "serving_styles_en": [
+      "LONG DRINK",
+      "TROPICAL"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Cold",
+    "ice_method_kr": "얼음 채움 (빌드)",
+    "ice_method_en": "Ice Cubes (Built)"
   },
   {
     "glass_id": 29,
     "name_en": "Old Fashioned Mug",
     "name_kr": "올드 패션드 머그",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "손잡이 달린 올드 패션드",
+    "sub_categories_en": "Handled Old Fashioned Mug",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "300ml~400ml",
@@ -448,14 +988,32 @@
     "expain_kr": [
       "올드 패션드 글라스처럼 짧고 두꺼운 바닥을 가졌지만, 손잡이가 달려있는 머그 형태",
       "주로 아이리시 커피나 맥주, 혹은 독특한 스타일의 칵테일을 서빙할 때 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (스페셜티/핫 드링크)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Specialty/Hot Drink)"
+    ],
+    "serving_styles_kr": [
+      "올 데이",
+      "핫 드링크"
+    ],
+    "serving_styles_en": [
+      "ALL DAY",
+      "HOT DRINK"
+    ],
+    "serve_temperature_kr": "차가움 또는 뜨거움",
+    "serve_temperature_en": "Cold or Hot",
+    "ice_method_kr": "얼음 채움 또는 없음",
+    "ice_method_en": "Ice Cubes or No Ice"
   },
   {
     "glass_id": 30,
     "name_en": "Julep Cup",
     "name_kr": "줄렙 컵",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "민트 줄렙 전용 컵",
+    "sub_categories_en": "Mint Julep Specific Cup",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "350ml~410ml",
@@ -463,14 +1021,30 @@
     "expain_kr": [
       "주로 금속(스테인리스, 주석 도금)으로 제작된 원통형의 잔",
       "민트 줄렙(Mint Julep) 칵테일 전용 잔으로, 금속의 특성상 잔 표면에 서리가 맺혀 시각적으로 차가움을 강조"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "민트 줄렙"
+    ],
+    "iba_cocktail_examples_en": [
+      "MINT JULEP"
+    ],
+    "serving_styles_kr": [
+      "올 데이"
+    ],
+    "serving_styles_en": [
+      "ALL DAY"
+    ],
+    "serve_temperature_kr": "매우 차갑게 (서리)",
+    "serve_temperature_en": "Very Cold (Frosted)",
+    "ice_method_kr": "크러쉬 아이스 채움",
+    "ice_method_en": "Cracked Ice"
   },
   {
     "glass_id": 31,
     "name_en": "Punch Bowl",
     "name_kr": "펀치 볼",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "대용량 파티 펀치 용기",
+    "sub_categories_en": "Large Party Punch Container",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "대용량 (수 리터)",
@@ -478,14 +1052,30 @@
     "expain_kr": [
       "파티나 모임에서 대용량의 펀치 칵테일을 만들어 두고 공유할 때 사용하는 큰 그릇 형태의 용기",
       "보통 국자(ladle)와 함께 사용되며, 잔(펀치 컵)에 덜어 마심"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (서빙 용기)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Serving Vessel)"
+    ],
+    "serving_styles_kr": [
+      "펀치"
+    ],
+    "serving_styles_en": [
+      "PUNCH"
+    ],
+    "serve_temperature_kr": "차가움",
+    "serve_temperature_en": "Cold",
+    "ice_method_kr": "큰 얼음 덩어리",
+    "ice_method_en": "Large Ice Block"
   },
   {
     "glass_id": 32,
     "name_en": "Tea Glass / Set",
     "name_kr": "티 글라스 / 세트",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "따뜻한 칵테일/펀치 컵",
+    "sub_categories_en": "Warm Cocktail/Punch Cup",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "150ml~240ml",
@@ -493,14 +1083,30 @@
     "expain_kr": [
       "작은 손잡이가 달린 유리 컵 형태로, 중동이나 러시아 문화권에서 차를 마시는 데 사용",
       "일부 따뜻한 칵테일이나 펀치를 서빙하는 데 활용될 수 있음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (따뜻한 음료)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Warm Beverages)"
+    ],
+    "serving_styles_kr": [
+      "핫 드링크"
+    ],
+    "serving_styles_en": [
+      "HOT DRINK"
+    ],
+    "serve_temperature_kr": "뜨겁게",
+    "serve_temperature_en": "Hot",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "No Ice"
   },
   {
     "glass_id": 33,
     "name_en": "Whiskey Tumbler (Basic)",
     "name_kr": "위스키 텀블러 (기본형)",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "기본형 온더락/믹스 드링크 잔",
+    "sub_categories_en": "Basic On-the-Rocks/Mix Drink Tumbler",
     "categories_kr": "텀블러",
     "categories_en": "Tumbler",
     "avg_volume_ml": "240ml~350ml",
@@ -508,14 +1114,34 @@
     "expain_kr": [
       "바닥이 두껍지 않고 곧은 벽을 가진 원통형의 일반적인 텀블러",
       "하이볼 글라스와 락 글라스의 중간 크기로, 간단한 믹스 드링크나 위스키 온더락에 다용도로 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "플랜터스 펀치",
+      "진 피즈 (얼음 없이)"
+    ],
+    "iba_cocktail_examples_en": [
+      "PLANTERS PUNCH",
+      "GIN FIZZ (Thin tall Tumbler glass)"
+    ],
+    "serving_styles_kr": [
+      "롱 드링크",
+      "올 데이"
+    ],
+    "serving_styles_en": [
+      "LONG DRINK",
+      "ALL DAY"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Cold",
+    "ice_method_kr": "얼음 채움 또는 없음",
+    "ice_method_en": "Ice Cubes or No Ice (as noted for Gin Fizz)"
   },
   {
     "glass_id": 34,
     "name_en": "Cognac Balloon Glass",
     "name_kr": "코냑 발론 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "대형 브랜디/코냑 잔",
+    "sub_categories_en": "Large Brandy/Cognac Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "350ml~600ml (실제 사용량은 60ml 내외)",
@@ -523,14 +1149,32 @@
     "expain_kr": [
       "볼 부분이 매우 둥글고 커서 마치 풍선처럼 생겼으며, 짧은 잔대를 가짐",
       "주로 코냑이나 브랜디의 향을 모으는 데 사용되며, 손바닥의 온기로 내용물을 살짝 데워 향을 증폭시킴"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (코냑/브랜디 니트)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Cognac/Brandy Neat)"
+    ],
+    "serving_styles_kr": [
+      "식후주",
+      "니트"
+    ],
+    "serving_styles_en": [
+      "AFTER DINNER",
+      "NEAT"
+    ],
+    "serve_temperature_kr": "실온 (향 증폭)",
+    "serve_temperature_en": "Room Temperature",
+    "ice_method_kr": "얼음 없음 (니트)",
+    "ice_method_en": "Neat (No Ice)"
   },
   {
     "glass_id": 35,
     "name_en": "Beer Mug",
     "name_kr": "비어 머그",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "대용량 맥주/칵테일 머그",
+    "sub_categories_en": "Large Beer/Cocktail Mug",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "350ml~1000ml",
@@ -538,14 +1182,32 @@
     "expain_kr": [
       "두껍고 튼튼한 유리로 만들어졌으며, 큰 손잡이가 달린 잔",
       "주로 맥주(특히 독일식 라거, 에일)를 마시는 데 사용되지만, 대용량의 칵테일이나 펀치에도 활용될 수 있음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (맥주/대용량)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Beer/Large Volume)"
+    ],
+    "serving_styles_kr": [
+      "맥주",
+      "롱 드링크"
+    ],
+    "serving_styles_en": [
+      "BEER",
+      "LONG DRINK"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 또는 없음",
+    "ice_method_en": "Ice Cubes or No Ice"
   },
   {
     "glass_id": 36,
     "name_en": "Jigger Measure Glass",
     "name_kr": "지거 계량 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "계량 도구/소용량 샷 잔",
+    "sub_categories_en": "Measuring Tool/Small Shot Glass",
     "categories_kr": "논-스템웨어/계량도구",
     "categories_en": "Non-Stemware/Measuring Tool",
     "avg_volume_ml": "15ml~60ml (계량 기준)",
@@ -553,14 +1215,30 @@
     "expain_kr": [
       "칵테일 제조 시 주류나 시럽 등을 정확하게 계량하기 위해 사용하는 잔",
       "양면의 용량이 다른 경우가 많으며, 계량된 음료를 샷(Shot) 잔 대용으로 마시기도 함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (계량 도구)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Measuring Tool)"
+    ],
+    "serving_styles_kr": [
+      "계량"
+    ],
+    "serving_styles_en": [
+      "MEASURING"
+    ],
+    "serve_temperature_kr": "해당 없음",
+    "serve_temperature_en": "N/A",
+    "ice_method_kr": "해당 없음",
+    "ice_method_en": "N/A"
   },
   {
     "glass_id": 37,
     "name_en": "Demitasse Cup",
     "name_kr": "데미타세 컵",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "소용량 뜨거운 칵테일 컵",
+    "sub_categories_en": "Small Hot Cocktail Cup",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "60ml~90ml",
@@ -568,14 +1246,32 @@
     "expain_kr": [
       "작은 사이즈의 커피 컵 또는 찻잔 형태로, 주로 에스프레소나 터키 커피를 마시는 데 사용",
       "용량이 작은 뜨거운 칵테일이나, 작은 디저트 칵테일을 서빙할 때 활용될 수 있음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "에스프레소 마티니 (변형 서빙)"
+    ],
+    "iba_cocktail_examples_en": [
+      "ESPRESSO MARTINI (Alternative Serve)"
+    ],
+    "serving_styles_kr": [
+      "식후주",
+      "핫 드링크"
+    ],
+    "serving_styles_en": [
+      "AFTER DINNER",
+      "HOT DRINK"
+    ],
+    "serve_temperature_kr": "뜨겁게 또는 차갑게 (소량)",
+    "serve_temperature_en": "Hot or Chilled (Small)",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "No Ice"
   },
   {
     "glass_id": 38,
     "name_en": "Scoop Glass",
     "name_kr": "스쿱 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "프로즌/디저트 칵테일 잔",
+    "sub_categories_en": "Frozen/Dessert Cocktail Glass",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "300ml~450ml",
@@ -583,14 +1279,32 @@
     "expain_kr": [
       "주로 바닥이 두껍고 넓으며, 아이스크림이나 셔벗을 담기 좋은 형태의 잔",
       "프로즌 칵테일이나 층을 이루는 대용량 디저트 칵테일을 담을 때 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (디저트/프로즌)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Dessert/Frozen)"
+    ],
+    "serving_styles_kr": [
+      "식후주",
+      "프로즌"
+    ],
+    "serving_styles_en": [
+      "AFTER DINNER",
+      "FROZEN"
+    ],
+    "serve_temperature_kr": "프로즌",
+    "serve_temperature_en": "Frozen",
+    "ice_method_kr": "블렌딩된 얼음",
+    "ice_method_en": "Blended Ice"
   },
   {
     "glass_id": 39,
     "name_en": "Sherry Glass",
     "name_kr": "쉐리 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "셰리/식후주 잔",
+    "sub_categories_en": "Sherry/Digestif Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "90ml~120ml",
@@ -598,14 +1312,32 @@
     "expain_kr": [
       "작고 튤립 모양의 볼과 잔대를 가졌으며, 와인 글라스보다 훨씬 작음",
       "주로 셰리(Sherry)나 포트 와인, 그리고 식후주(Digestif)용 리큐어를 소량 마시는 데 적합함"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (식후주 니트)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Digestif Neat)"
+    ],
+    "serving_styles_kr": [
+      "식후주",
+      "니트"
+    ],
+    "serving_styles_en": [
+      "AFTER DINNER",
+      "NEAT"
+    ],
+    "serve_temperature_kr": "실온 또는 살짝 차갑게",
+    "serve_temperature_en": "Room Temp or Slightly Chilled",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "No Ice"
   },
   {
     "glass_id": 40,
     "name_en": "Akvavit Glass",
     "name_kr": "아쿠아비트 글라스",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "스칸디나비아 리큐어 잔",
+    "sub_categories_en": "Scandinavian Liqueur Glass",
     "categories_kr": "스템웨어",
     "categories_en": "Stemware",
     "avg_volume_ml": "45ml~60ml",
@@ -613,14 +1345,32 @@
     "expain_kr": [
       "길고 가느다란 잔대를 가진 작은 샷 글라스 형태로, 때로는 작은 플루트 모양을 가짐",
       "스칸디나비아 전통 리큐어인 아쿠아비트(Akvavit)를 차갑게 서빙하는 데 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (아쿠아비트 니트)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Akvavit Neat)"
+    ],
+    "serving_styles_kr": [
+      "샷",
+      "니트"
+    ],
+    "serving_styles_en": [
+      "SHOT",
+      "NEAT"
+    ],
+    "serve_temperature_kr": "차갑게",
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "No Ice"
   },
   {
     "glass_id": 41,
     "name_en": "Highball/Iced Tea Glass (Standard)",
     "name_kr": "하이볼/아이스티 글라스 (표준형)",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "대용량 롱 드링크 잔",
+    "sub_categories_en": "Large Capacity Long Drink Glass",
     "categories_kr": "텀블러",
     "categories_en": "Tumbler",
     "avg_volume_ml": "410ml~470ml",
@@ -628,7 +1378,27 @@
     "expain_kr": [
       "일반적인 하이볼 잔보다 용량이 더 큰 기본 원통형 텀블러",
       "믹서와 얼음을 풍부하게 넣는 대용량 롱 드링크, 아이스티, 또는 논알콜 칵테일에 널리 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "좀비",
+      "러시안 스프링 펀치"
+    ],
+    "iba_cocktail_examples_en": [
+      "ZOMBIE",
+      "RUSSIAN SPRING PUNCH"
+    ],
+    "serving_styles_kr": [
+      "롱 드링크",
+      "스파클링"
+    ],
+    "serving_styles_en": [
+      "LONG DRINK",
+      "SPARKLING"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 (크러쉬 또는 큐브)",
+    "ice_method_en": "Ice Cubes or Cracked Ice"
   },
   {
     "glass_id": 42,
@@ -643,14 +1413,32 @@
     "expain_kr": [
       "볼이 크고 둥글며 잔대가 있는 와인 잔 모양",
       "주로 '진 토닉(Gin & Tonic)'을 만들 때 많은 얼음과 가니쉬를 담아 향을 모으고 차가움을 유지하는 데 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "스프리츠"
+    ],
+    "iba_cocktail_examples_en": [
+      "SPRITZ"
+    ],
+    "serving_styles_kr": [
+      "올 데이",
+      "스파클링"
+    ],
+    "serving_styles_en": [
+      "ALL DAY",
+      "SPARKLING"
+    ],
+    "serve_temperature_kr": "매우 차갑게",
+    "serve_temperature_en": "Very Cold",
+    "ice_method_kr": "얼음 채움 (빌드)",
+    "ice_method_en": "Ice Cubes (Built)"
   },
   {
     "glass_id": 43,
     "name_en": "Tankard / Stein",
     "name_kr": "탱커드 / 슈타인",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "전통 맥주/겨울 펀치 머그",
+    "sub_categories_en": "Traditional Beer/Winter Punch Mug",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "470ml~1000ml",
@@ -658,14 +1446,34 @@
     "expain_kr": [
       "크고 튼튼하며 두꺼운 유리 또는 도자기로 만들어지고 손잡이가 달린 전통적인 머그",
       "주로 맥주에 사용되나, 겨울철 뜨거운 펀치나 대용량의 클래식 칵테일을 캐주얼하게 서빙할 때 사용"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (맥주/펀치)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Beer/Punch)"
+    ],
+    "serving_styles_kr": [
+      "맥주",
+      "펀치",
+      "핫 드링크"
+    ],
+    "serving_styles_en": [
+      "BEER",
+      "PUNCH",
+      "HOT DRINK"
+    ],
+    "serve_temperature_kr": "차가움 또는 뜨거움",
+    "serve_temperature_en": "Cold or Hot",
+    "ice_method_kr": "얼음 채움 또는 없음",
+    "ice_method_en": "Ice Cubes or No Ice"
   },
   {
     "glass_id": 44,
     "name_en": "Punch Cup",
     "name_kr": "펀치 컵",
-    "sub_categories_kr": "",
-    "sub_categories_en": "",
+    "sub_categories_kr": "펀치 서빙 소형 컵",
+    "sub_categories_en": "Punch Serving Small Cup",
     "categories_kr": "논-스템웨어",
     "categories_en": "Non-Stemware",
     "avg_volume_ml": "90ml~150ml",
@@ -673,7 +1481,23 @@
     "expain_kr": [
       "펀치 볼과 함께 세트로 사용되는 작은 손잡이 달린 컵",
       "펀치 볼에서 칵테일을 덜어 마시는 용도로, 격식 있는 파티에서 사용됨"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (펀치 소분)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Punch Serving)"
+    ],
+    "serving_styles_kr": [
+      "펀치"
+    ],
+    "serving_styles_en": [
+      "PUNCH"
+    ],
+    "serve_temperature_kr": "차가움 또는 뜨거움",
+    "serve_temperature_en": "Cold or Hot",
+    "ice_method_kr": "얼음 없음",
+    "ice_method_en": "No Ice"
   },
   {
     "glass_id": 45,
@@ -688,6 +1512,23 @@
     "expain_kr": [
       "짧은 잔대와 좁은 입구를 가진 튤립 모양의 작은 잔",
       "셰리 와인 시음에 사용되던 전통 잔에서 유래했으며, 위스키의 향을 전문적으로 집중시키는 테이스팅 잔으로 글렌캐런 잔과 함께 인기가 많음"
-    ]
+    ],
+    "iba_cocktail_examples_kr": [
+      "해당 없음 (시음 전용)"
+    ],
+    "iba_cocktail_examples_en": [
+      "N/A (Tasting Glass)"
+    ],
+    "serving_styles_kr": [
+      "시음/스트레이트"
+    ],
+    "serving_styles_en": [
+      "Tasting/Neat"
+    ],
+    "serve_temperature_kr": "실온",
+    "serve_temperature_en": "Room Temperature",
+    "ice_method_kr": "얼음 없음 (니트)",
+    "ice_method_en": "Neat (No Ice)"
   }
 ]
+```

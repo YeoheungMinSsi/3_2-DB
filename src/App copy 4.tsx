@@ -11,8 +11,8 @@ import RelatedPage from './components/RelatedPage';
 import DrinkCategoryPage from './components/DrinkCategoryPage';
 import CocktailListPage from './components/CocktailListPage';
 
-// JSON 데이터를 가져옵니다. 💡 [제거] 로컬 JSON 로드 구문 제거
-// import cocktailData from '../public/sul.json'; 
+// JSON 데이터를 가져옵니다.
+import cocktailData from '../public/sul.json';
 
 
 // sul.json 구조를 기반으로 타입 정의 (NestJS와 동일하게 맞춤)
@@ -66,43 +66,20 @@ function App() {
   const [currentPage, setCurrentPage] = useState<Page>('HOME');
   const [currentCategoryType, setCurrentCategoryType] = useState<CategoryType>('GENERAL');
 
-  // 💡 [추가] API에서 받아올 데이터를 상태로 관리 (초기값 빈 배열)
-  const [allCocktails, setAllCocktails] = useState<CocktailData[]>([]);
+  // 💡 [복구] 로컬 JSON을 직접 로드합니다. (동기적)
+  const allCocktails: CocktailData[] = cocktailData as CocktailData[];
+  
+  // 💡 [수정] currentCocktail을 초기에는 명시적으로 null로 설정합니다.
+  // 이 상태로 시작해야 CocktailInfo에서 "카드를 클릭하여 추천받으세요!" 메시지가 뜹니다.
   const [currentCocktail, setCurrentCocktail] = useState<CocktailData | null>(null);
 
-  // 💡 [추가] 로딩 및 오류 상태 관리 (API 호출의 필수 요소)
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-
-
-  // 💡 [핵심 추가] NestJS 백엔드 API에서 데이터를 가져오는 useEffect
+  // 💡 [핵심 수정] useEffect 훅을 제거합니다. 
+  // 이 훅이 처음 렌더링 시 currentCocktail을 무작위로 설정하는 원인이었습니다.
+  /*
   useEffect(() => {
-    const fetchCocktails = async () => {
-      try {
-        // 💡 [NestJS API 호출] NestJS 서버의 칵테일 엔드포인트를 호출
-        const response = await fetch('http://localhost:3000/cocktails');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data: CocktailData[] = await response.json();
-        setAllCocktails(data);
-
-        // 💡 [핵심 수정] 데이터 로드 성공 후, currentCocktail을 null로 유지하여 클릭 전에는 숨깁니다.
-        // allCocktails에 데이터가 있고, currentCocktail이 null일 경우에만 초기값을 설정합니다.
-        // (클릭 전 비어있기 기능 유지를 위해, 초기에는 null로 두고 클릭 시에만 설정)
-        // 하지만 데이터는 로드되었으므로 isLoading은 해제합니다.
-
-        setIsLoading(false);
-        setIsError(false);
-      } catch (error) {
-        console.error("칵테일 데이터를 불러오는 중 오류 발생: NestJS 서버를 확인하세요.", error);
-        setIsError(true); // 💡 오류 상태 설정
-        setIsLoading(false);
-      }
-    };
-
-    fetchCocktails();
-  }, []); // 컴포넌트 마운트 시 한 번만 실행
+    // 이 로직 제거
+  }, [allCocktails, currentCocktail]); 
+  */
 
 
   // 💡 [라우팅 메소드] 페이지 이동 함수
@@ -118,18 +95,12 @@ function App() {
     setCurrentPage('HOME');
     if (allCocktails.length === 0) {
       console.error("칵테일 데이터가 없습니다.");
-      // 💡 데이터가 없으면 오류 메시지를 띄우기 위해 isError를 true로 설정합니다.
-      setIsError(true);
       return;
     }
 
-    // 💡 [수정] 데이터가 있을 때만 무작위 칵테일 설정
     const randomIndex = Math.floor(Math.random() * allCocktails.length);
     const randomCocktail = allCocktails[randomIndex];
     setCurrentCocktail(randomCocktail);
-
-    // 혹시 오류 상태였다면 클릭으로 복구 시도 시 오류 상태 해제
-    setIsError(false);
   };
 
 
@@ -137,31 +108,8 @@ function App() {
   const renderPageContent = () => {
     const contentWrapperClass = 'w-full max-w-[1440px] mx-auto';
 
-    // 💡 [추가] 오류 발생 시 오류 메시지 표시
-    if (isError) {
-      return (
-        <div className={`${contentWrapperClass} p-8 mt-8 text-center bg-red-100 rounded-lg`}>
-          <h1 className="text-3xl font-bold text-red-700 mb-4">데이터 로드 실패</h1>
-          <p className="text-gray-700">
-            NestJS 백엔드 서버가 실행 중이거나 데이터를 정상적으로 반환하는지 확인해 주세요.
-            (주소: <span className='font-mono text-sm'>http://localhost:3000/cocktails</span>)
-          </p>
-          <p className="mt-2 text-sm text-gray-500">브라우저 콘솔(F12)에서 자세한 네트워크 오류를 확인할 수 있습니다.</p>
-        </div>
-      );
-    }
-
-    // 💡 로딩 중인 경우 로딩 메시지 표시
-    if (isLoading) {
-      return (
-        <div className={`${contentWrapperClass} flex justify-center items-center p-16 h-full min-h-[500px]`}>
-          <span className="loading loading-spinner loading-lg text-amber-500"></span>
-          <p className="ml-3 text-lg text-gray-600">데이터를 로드하는 중입니다...</p>
-        </div>
-      );
-    }
-
-    // 💡 [유지] 데이터 로드 성공 후 페이지 콘텐츠 렌더링
+    // 💡 [복구] 로딩/오류 상태 체크가 필요 없어졌으므로 제거합니다.
+    
     switch (currentPage) {
       case 'HOME':
         return (
