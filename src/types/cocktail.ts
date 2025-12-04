@@ -8,6 +8,7 @@ export interface CocktailData {
     ingredients: string[];
     ingredients_kr: string[];
     method_kr: string;
+    method_en: string;
     category: string;
     calculated_abv?: string;
 }
@@ -17,7 +18,7 @@ export interface ClassificationStyle {
     serving_styles_id: number;
     styles_name: { kr: string, en: string };
     feature: string[];
-    iba_cocktail_examples: { kr: string[], en: string[] }; 
+    iba_cocktail_examples: { kr: string[], en: string[] };
 }
 
 // 뷰 상태 (페이지 ID) - App.tsx에서 복사
@@ -32,4 +33,7 @@ export type Page =
     'COCKTAIL_CLASSIFICATION'; // 💡 새 페이지 ID 추가
 
 // 카테고리 필터 타입 - App.tsx에서 복사
-export type CategoryType = 'SPIRIT_ONLY' | 'GENERAL' | 'DRINK_TYPE_ONLY';
+export type CategoryType =
+    'SPIRIT_ONLY' |
+    'GENERAL' |
+    'DRINK_TYPE_ONLY';

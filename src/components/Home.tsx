@@ -4,17 +4,18 @@ import React from 'react';
 // Card 및 CocktailInfo 컴포넌트가 src/components에 있다고 가정
 import Card from './Card';
 import CocktailInfo from './CocktailInfo';
+import type { CocktailData } from '../types/cocktail';
 
 // App.tsx에서 정의된 타입 복사 (CocktailData)
-interface CocktailData {
-    cocktail_id: number;
-    // ... (필요한 모든 필드 정의)
-    name_kr: string;
-    name_en: string;
-    ingredients: string[];
-    category: string;
-    // ...
-}
+// interface CocktailData {
+//     cocktail_id: number;
+//     // ... (필요한 모든 필드 정의)
+//     name_kr: string;
+//     name_en: string;
+//     ingredients: string[];
+//     category: string;
+//     // ...
+// }
 
 interface HomeProps {
     currentCocktail: CocktailData | null;

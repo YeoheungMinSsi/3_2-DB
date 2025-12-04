@@ -23,10 +23,10 @@ const Footer = () => (
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const navigateTo = useNavigate();
     const handleNavigation: NavProps['navigateTo'] = (pageId, categoryType) => {
-        
+
         // 여기서는 pageId를 경로로 사용하여 표준 navigate 함수를 호출합니다.
         // categoryType이 필요하다면 navigate 함수의 state 옵션으로 전달할 수 있습니다.
-        navigateTo(pageId, { state: { categoryType } }); 
+        navigateTo(pageId, { state: { categoryType } });
     };
 
     return (

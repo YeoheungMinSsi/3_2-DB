@@ -1,19 +1,20 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
+import type { CocktailData } from '../types/cocktail';
 
 // 페이지당 표시할 항목 수 (상수)
 const ITEMS_PER_PAGE = 10;
 
 // App.tsx와 일치하는 타입 정의
-interface CocktailData {
-    cocktail_id: number;
-    name_kr: string;
-    name_en: string;
-    category: string;
-    ingredients: string[];
-    ingredients_kr: string[];
-    method_kr: string;
-    calculated_abv?: string; // 💡 sul.json에 있는 도수 필드
-}
+// interface CocktailData {
+//     cocktail_id: number;
+//     name_kr: string;
+//     name_en: string;
+//     category: string;
+//     ingredients: string[];
+//     ingredients_kr: string[];
+//     method_kr: string;
+//     calculated_abv?: string; // 💡 sul.json에 있는 도수 필드
+// }
 
 interface CocktailListPageProps {
     cocktails: CocktailData[];

@@ -1,5 +1,5 @@
 // src/components/CocktailClassification.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import type { CocktailStyle } from './interfaces/CocktailStyle';
 
 // NestJS API 엔드포인트

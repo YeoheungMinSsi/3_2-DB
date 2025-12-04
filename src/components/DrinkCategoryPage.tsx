@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect } from 'react';
 // 💡 데이터 파일에서 인터페이스와 데이터를 import합니다.
 // ALL_DRINK_CATEGORIES는 값이므로 일반 import를 사용합니다.
-import { ALL_DRINK_CATEGORIES } from '../data/DrinkCategoryData';
+import { ALL_DRINK_CATEGORIES } from '../data/DrinkCategoryData.ts';
 // 💡 DrinkCategory는 순수 타입이므로 'import type'을 사용합니다. (ts(1484) 및 ts(6133) 해결)
-import type { DrinkCategory } from '../data/DrinkCategoryData';
+// import type { DrinkCategory } from '../data/DrinkCategoryData';
 
 
 // Props 타입 정의

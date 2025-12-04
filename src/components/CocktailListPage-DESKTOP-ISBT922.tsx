@@ -1,19 +1,20 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
+import type { CocktailData } from '../types/cocktail';
 
 // 페이지당 표시할 항목 수 (상수)
 const ITEMS_PER_PAGE = 10;
 
 // App.tsx와 일치하는 타입 정의
-interface CocktailData {
-    cocktail_id: number;
-    name_kr: string;
-    name_en: string;
-    category: string;
-    ingredients: string[];
-    ingredients_kr: string[];
-    method_kr: string;
-    calculated_abv?: string; // 💡 sul.json에 있는 도수 필드
-}
+// interface CocktailData {
+//     cocktail_id: number;
+//     name_kr: string;
+//     name_en: string;
+//     category: string;
+//     ingredients: string[];
+//     ingredients_kr: string[];
+//     method_kr: string;
+//     calculated_abv?: string; // 💡 sul.json에 있는 도수 필드
+// }
 
 interface CocktailListPageProps {
     cocktails: CocktailData[];
@@ -117,7 +118,7 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
 
     return (
         // 레이아웃 문제 해결을 위해 max-w-6xl mx-auto는 제거하고 w-full만 사용합니다.
-        <div className="bg-white shadow-xl rounded-lg w-full">
+        <div className="bg-white shadow-xl rounded-lg w-full" id="cocktail-list-page">
             {/* 💡 내부 패딩/마진을 위한 래퍼 */}
             <div className="p-8 mt-8">
                 <h1 className="text-3xl font-bold text-gray-800 border-b pb-2 mb-6">
@@ -140,12 +141,12 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
                                             {/* 이름/카테고리/도수 정보 영역 */}
                                             <div className="flex-1 min-w-0">
                                                 {/* 1. 이름 */}
-                                                <h2 className="text-3xl font-extrabold text-amber-800 truncate">
+                                                <h2 className="text-xl font-extrabold text-amber-800 truncate">
                                                     {cocktail.name_kr} ({cocktail.name_en})
                                                 </h2>
                                                 {/* 2. 카테고리 (이름 아래) */}
                                                 <p className="badge badge-outline badge-primary mt-1 text-xs">{cocktail.category}</p>
-                                                
+
                                                 {/* 3. 도수 (카테고리 아래) */}
                                                 <div className="mt-1 flex items-center text-sm text-gray-600">
                                                     <span className="font-semibold mr-1">도수 (ABV):</span>
@@ -167,7 +168,7 @@ const CocktailListPage: React.FC<CocktailListPageProps> = ({ cocktails }) => {
                                             <div className="ml-8 self-center">
                                                 <button
                                                     className="btn btn-sm btn-warning"
-                                                    id = "cockList-detail-button"
+                                                    id="cockList-detail-button"
                                                     onClick={() => handleDetailClick(cocktail)}
                                                 >
                                                     자세히

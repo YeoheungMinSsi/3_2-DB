@@ -1,3 +1,15 @@
+요청하신 대로, 기존 칵테일 잔 목록에 비어 있던 `sub_categories`를 채우고, 대화에서 제안된 IBA 칵테일 정보와 서빙 방식을 포함하는 필드를 추가하여 JSON 형태의 코드를 작성했습니다.
+
+새로 추가된 필드는 다음과 같습니다.
+
+*   `iba_cocktail_examples_kr`, `iba_cocktail_examples_en`: 해당 잔에 담아 서빙되는 IBA 공식 칵테일 예시.
+*   `serving_styles_kr`, `serving_styles_en`: 해당 잔에 주로 담기는 칵테일 스타일 (IBA 분류 기반).
+*   `serve_temperature_kr`, `serve_temperature_en`: 음료의 표준 온도 및 서빙 방식.
+*   `ice_method_kr`, `ice_method_en`: 얼음 사용 방식 (예: 얼음 없음, 온더락, 크러쉬 아이스).
+
+**참고:** IBA 소스에서 칵테일 서빙에 사용되는 잔의 명칭(`cocktail glass`, `highball glass`, `old fashioned glass`, `flute glass` 등)과 칵테일 스타일(`SPARKLING`, `LONG DRINK`, `AFTER DINNER` 등)을 직접적으로 추출하여 매핑했습니다.
+
+```json
 [
   {
     "glass_id": 1,
@@ -1519,3 +1531,4 @@
     "ice_method_en": "Neat (No Ice)"
   }
 ]
+```
