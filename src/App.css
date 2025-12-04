@@ -2,18 +2,31 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 @plugin "daisyui";
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+
+body {
+  /* 💡 [핵심 수정] 스크롤 바 공간을 항상 예약하여, 스크롤 유무와 상관없이 화면 너비를 고정합니다. */
+  overflow-y: scroll;
+}
 
 /* 2560px 이상의 해상도를 위한 설정 */
 @media (min-width: 2560px) {
   .container {
-    max-width: 1600px;
+    max-width: 1440px;
   }
 }
 
 
 #main {
   width: 100%;
-  background-color: oklch(83.262% 0.04127 17.887);
+  /* background-color: oklch(83.262% 0.04127 17.887); */
+}
+
+/* 박스의 그림자를 상하좌우 모든 크기로 만듦 */
+#drink-category-box{
+  box-shadow: 0rem 0rem .5rem gray;
 }
 
 #header {
@@ -21,8 +34,7 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  background-color: rgb(250, 223, 184);
-
+  /* background-color: rgb(250, 223, 184); */
 }
 
 .header-container{
@@ -30,10 +42,11 @@
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  justify-content: space-between;
   display: flex;
-  align-items: center;
-    padding-left: 32px;
-  padding-right: 32px;
+  align-items: center;  
+  /* padding-left: 32px;
+  padding-right: 32px; */
 }
 
 
@@ -42,76 +55,68 @@
 }
 
 .header-nav-container {
-  margin-left: 7rem;
+  padding: 0;
+  /* margin-left: 7rem; 이 부분은 flex gap과 dropdown 스타일로 대체됩니다. */
+}
+
+#page_login{
+  width: 8rem;
 }
 
 
-.header-nav-list {
-  display: flex;
-  /* flex-direction: column; */
-
-}
-
-.header-nav {
-  margin: 1rem;
-  font-size: 1.1rem;
-}
-
-.right_header {
-  margin-left: auto;
-}
-
-
-/* container line */
+/* content 영역 수정: 카드와 정보 박스를 가로로 배치 */
 #container {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  /* height: 100vh; */
-  
   padding-left: 32px;
   padding-right: 32px;
+}
+#drink-category-page, #cocktail-list-page{
 
-  background-color: azure;
+  width: 1440px;
 }
 
 .content{
   width: 100%;
   max-width: 1440px;
-    margin-left: auto;
-  margin-right: auto;
-  height: 30rem;
-  background-color: rgb(219, 253, 253);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-body {
-  width: 100%;
-}
-
-#root {
-  max-width: 1280px;
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1280px;
-  height: 100vh;
-  margin: 0 auto;
-  text-align: center;
+  
+  /* --- 핵심 수정: Flex 레이아웃으로 Card와 Info Box를 옆으로 배치 --- */
+  display: flex; 
+  gap: 2rem;     /* 카드와 정보 박스 사이의 간격 */
+  align-items: flex-start; /* 상단 정렬 */
+  justify-content: space-between; /* 좌우로 최대한 벌리기 */
+  min-height: 25rem; /* 최소 높이 확보 */
+  /* ----------------------------------------------------------------- */
+}
+
+
+/* Card.tsx에 정의된 크기 (20rem x 10rem) */
+.Main-card{
+  width: 20rem;
+  height: 10rem;
+}
+
+/* --- 새로 추가: 정보 박스(CocktailInfo)의 고정 크기 설정 --- */
+.fixed-info-box {
+  width: 55rem; /* Card의 너비와 동일하게 고정 */
+  height: 25rem; /* Card의 높이와 동일하게 고정 */
+  margin-top: 3rem; /* Card의 my-12 (48px)와 비슷한 상단 여백 설정 */
+}
+
+.hero-card{
+  height: 8rem;
+}
+
+#cocktail-classification-page{
   display: flex;
   flex-direction: column;
-  background-color: blanchedalmond;
-} */
+  
+  #cocktail-classification-page-name{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+  }
+}

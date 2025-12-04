@@ -1,0 +1,1526 @@
+[
+  {
+    "cocktail_id": 1,
+    "name_kr": "벨리니",
+    "name_en": "BELLINI",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "100 ml Prosecco",
+      "50 ml White Peach Puree"
+    ],
+    "total_volume_ml": 150.0,
+    "calculated_abv": "미지원",
+    "method_kr": "복숭아 퓨레를 얼음이 담긴 믹싱 글라스에 붓고, 프로세코 와인을 추가합니다. 부드럽게 저어준 후, 차갑게 식힌 플루트 글라스에 따릅니다. (참고: 푸치니(PUCCINI)는 신선한 만다린 오렌지 주스, 로시니(ROSSINI)는 신선한 딸기 퓨레, 틴토레토(TINTORETTO)는 신선한 석류 주스를 사용합니다).",
+    "glassware": "Flute Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 2,
+    "name_kr": "블랙 러시안",
+    "name_en": "BLACK RUSSIAN",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "50 ml Vodka",
+      "20 ml Coffee Liqueur"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "재료들을 얼음이 채워진 올드 패션드 글라스에 붓고 부드럽게 저어줍니다. (참고: 화이트 러시안(WHITE RUSSIAN)을 만들 경우, 신선한 크림을 위에 띄우고 천천히 저어줍니다).",
+    "glassware": "Old Fashioned Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 3,
+    "name_kr": "블러디 메리",
+    "name_en": "BLOODY MARY",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "45 ml Vodka",
+      "90 ml Tomato Juice",
+      "15 ml Fresh Lemon Juice",
+      "2 dashes Worcestershire Sauce",
+      "Tabasco, Celery Salt, Pepper (Up to taste)"
+    ],
+    "total_volume_ml": 150.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 넣고 부드럽게 저어준 후, 록스 글라스에 따릅니다. (참고: 얼음을 넣어 달라고 요청받은 경우 하이볼 글라스에 따릅니다).",
+    "glassware": "Rocks Glass (or Highball Glass)",
+    "garnish_kr": "셀러리, 레몬 웨지 (선택 사항)."
+  },
+  {
+    "cocktail_id": 4,
+    "name_kr": "카이피리냐",
+    "name_en": "CAIPIRINHA",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "60 ml Cachaça",
+      "1 Lime cut into small wedges",
+      "4 Teaspoons White Cane Sugar"
+    ],
+    "total_volume_ml": 60.0,
+    "calculated_abv": "미지원",
+    "method_kr": "라임과 설탕을 더블 올드 패션드 글라스에 넣고 부드럽게 머들링합니다. 글라스에 크러시드 아이스(cracked ice)를 채우고 카샤사를 넣습니다. 재료들이 섞이도록 부드럽게 저어줍니다. (참고: CAIPIROSKA는 카샤사 대신 보드카를, CAIPIRISSIMA는 카샤사 대신 럼을 사용합니다).",
+    "glassware": "Double Old Fashioned Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 5,
+    "name_kr": "샴페인 칵테일",
+    "name_en": "CHAMPAGNE COCKTAIL",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "90 ml Chilled Champagne",
+      "10 ml Cognac",
+      "2 dashes Angostura bitters",
+      "Few drops of Grand Marnier (optional)",
+      "1 sugar cube"
+    ],
+    "total_volume_ml": 100.0,
+    "calculated_abv": "미지원",
+    "method_kr": "각설탕에 비터스 2 대시를 적셔 큰 샴페인 글라스에 넣고, 코냑을 추가합니다. 차갑게 식힌 샴페인을 부드럽게 부어줍니다.",
+    "glassware": "Large Champagne Glass",
+    "garnish_kr": "오렌지 제스트와 마라스키노 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 6,
+    "name_kr": "코스모폴리탄",
+    "name_en": "COSMOPOLITAN",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "40 ml Vodka Citron",
+      "15 ml Cointreau",
+      "15 ml Fresh Lime Juice",
+      "30 ml Cranberry Juice"
+    ],
+    "total_volume_ml": 100.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 칵테일 셰이커에 넣습니다. 잘 흔들어준 후, 큰 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Large Cocktail Glass",
+    "garnish_kr": "레몬 트위스트로 장식합니다."
+  },
+  {
+    "cocktail_id": 7,
+    "name_kr": "콥스 리바이버 #2",
+    "name_en": "CORPSE REVIVER #2",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "30 ml Gin",
+      "30 ml Cointreau",
+      "30 ml Lillet Blanc",
+      "30 ml Fresh Lemon Juice",
+      "1 dash Absinthe"
+    ],
+    "total_volume_ml": 120.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 담긴 셰이커에 붓습니다. 잘 흔들어준 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "오렌지 제스트."
+  },
+  {
+    "cocktail_id": 8,
+    "name_kr": "쿠바 리브레",
+    "name_en": "CUBA LIBRE",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "50 ml White Rum",
+      "120 ml Cola",
+      "10 ml Fresh Lime Juice"
+    ],
+    "total_volume_ml": 180.0,
+    "calculated_abv": "미지원",
+    "method_kr": "얼음이 채워진 하이볼 글라스에 모든 재료를 넣고 만듭니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "라임 웨지로 장식합니다."
+  },
+  {
+    "cocktail_id": 9,
+    "name_kr": "프렌치 75",
+    "name_en": "FRENCH 75",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "30 ml Gin",
+      "15 ml Fresh Lemon Juice",
+      "15 ml Sugar Syrup",
+      "60 ml Champagne"
+    ],
+    "total_volume_ml": 120.0,
+    "calculated_abv": "미지원",
+    "method_kr": "샴페인을 제외한 모든 재료를 셰이커에 붓습니다. 잘 흔들어준 후, 샴페인 플루트에 걸러냅니다. 샴페인을 채워 넣고 부드럽게 저어줍니다.",
+    "glassware": "Champagne Flute",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 10,
+    "name_kr": "프렌치 커넥션",
+    "name_en": "FRENCH CONNECTION",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "35 ml Cognac",
+      "35 ml Amaretto"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 올드 패션드 글라스에 직접 붓습니다. 부드럽게 저어줍니다.",
+    "glassware": "Old Fashioned Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 11,
+    "name_kr": "골든 드림",
+    "name_en": "GOLDEN DREAM",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "20 ml Galliano",
+      "20 ml Triple Sec",
+      "20 ml Fresh Orange Juice",
+      "10 ml Fresh Cream"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 셰이커에 붓습니다. 몇 초 동안 힘차게 흔듭니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 12,
+    "name_kr": "그래스호퍼",
+    "name_en": "GRASSHOPPER",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "20 ml Crème de Cacao (White)",
+      "20 ml Crème de Menthe (Green)",
+      "20 ml Fresh Cream"
+    ],
+    "total_volume_ml": 60.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 셰이커에 붓습니다. 몇 초 동안 힘차게 흔듭니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음, 민트 잎은 선택 사항입니다."
+  },
+  {
+    "cocktail_id": 13,
+    "name_kr": "헤밍웨이 스페셜",
+    "name_en": "HEMINGWAY SPECIAL",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "60 ml Rum",
+      "40 ml Grapefruit Juice",
+      "15 ml Maraschino",
+      "15 ml Fresh Lime"
+    ],
+    "total_volume_ml": 130.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 셰이커에 붓습니다. 잘 흔들어준 후, 큰 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Large Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 14,
+    "name_kr": "호스 넥",
+    "name_en": "HORSE'S NECK",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "40 ml Cognac",
+      "120 ml Ginger Ale",
+      "Dash of Angostura Bitters (optional)"
+    ],
+    "total_volume_ml": 160.0,
+    "calculated_abv": "미지원",
+    "method_kr": "코냑과 진저 에일을 얼음이 든 하이볼 글라스에 직접 붓습니다. 부드럽게 저어줍니다. 선호에 따라 앙고스투라 비터를 대시하여 추가할 수 있습니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "레몬 껍질 나선형 모양으로 장식합니다."
+  },
+  {
+    "cocktail_id": 15,
+    "name_kr": "아이리시 커피",
+    "name_en": "IRISH COFFEE",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "50 ml Irish Whiskey",
+      "120 ml Hot coffee",
+      "50 ml Fresh cream (Chilled)",
+      "1 teaspoon Sugar"
+    ],
+    "total_volume_ml": 220.0,
+    "calculated_abv": "미지원",
+    "method_kr": "예열된 아이리시 커피 글라스에 따뜻한 블랙 커피를 붓습니다. 위스키와 최소 한 티스푼의 설탕을 넣고 녹을 때까지 저어줍니다. 차갑고 걸쭉한 생크림을 스푼 뒷면을 이용해 커피 표면 바로 위에 조심스럽게 부어줍니다. 크림 층이 섞이지 않고 커피 위에 떠 있게 됩니다. 일반 설탕 대신 설탕 시럽을 사용할 수 있습니다.",
+    "glassware": "Irish Coffee Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 16,
+    "name_kr": "키르",
+    "name_en": "KIR",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "90 ml Dry White Wine",
+      "10 ml Crème de Cassis"
+    ],
+    "total_volume_ml": 100.0,
+    "calculated_abv": "미지원",
+    "method_kr": "크렘 드 카시스를 글라스에 붓고, 화이트 와인으로 채워 넣습니다. (참고: KIR ROYAL은 화이트 와인 대신 샴페인을 사용합니다).",
+    "glassware": "Glass (Specific type not listed)",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 17,
+    "name_kr": "롱 아일랜드 아이스 티",
+    "name_en": "LONG ISLAND ICED TEA",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "15 ml Vodka",
+      "15 ml Tequila",
+      "15 ml White rum",
+      "15 ml Gin",
+      "15 ml Cointreau",
+      "25 ml Lemon juice",
+      "30 ml Simple syrup",
+      "Top with Cola"
+    ],
+    "total_volume_ml": 130.0,
+    "calculated_abv": "미지원",
+    "method_kr": "얼음이 채워진 하이볼 글라스에 모든 재료를 넣습니다. 부드럽게 저어줍니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "레몬 슬라이스 (선택 사항)."
+  },
+  {
+    "cocktail_id": 18,
+    "name_kr": "마이 타이",
+    "name_en": "MAI-TAI",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "30 ml Amber Jamaican Rum",
+      "30 ml Martinique Molasses Rhum*",
+      "15 ml Orange Curacao",
+      "15 ml Orgeat Syrup (Almond)",
+      "30 ml Fresh Lime Juice",
+      "7.5 ml Simple Syrup"
+    ],
+    "total_volume_ml": 127.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 셰이커에 넣습니다. 흔든 후 더블 록스 글라스 또는 하이볼 글라스에 따릅니다. (*참고: 트레이더 빅이 사용한 마르티니크 당밀 럼은 아그리콜 럼이 아닌 당밀로 만든 '러미(rummy)' 유형이었습니다).",
+    "glassware": "Double Rocks Glass or Highball Glass",
+    "garnish_kr": "파인애플 창, 민트 잎, 라임 껍질로 장식합니다."
+  },
+  {
+    "cocktail_id": 19,
+    "name_kr": "마가리타",
+    "name_en": "MARGARITA",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "50 ml Tequila 100% Agave",
+      "20 ml Triple Sec",
+      "15 ml Freshly Squeezed Lime Juice"
+    ],
+    "total_volume_ml": 85.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 셰이커에 넣습니다. 흔든 후 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "절반의 소금 림 (선택 사항)."
+  },
+  {
+    "cocktail_id": 20,
+    "name_kr": "미모사",
+    "name_en": "MIMOSA",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "75 ml Fresh orange juice",
+      "75 ml Prosecco"
+    ],
+    "total_volume_ml": 150.0,
+    "calculated_abv": "미지원",
+    "method_kr": "오렌지 주스를 플루트 글라스에 붓고 스파클링 와인을 부드럽게 붓습니다. 부드럽게 저어줍니다. (참고: 벅스 피즈(Buck’s Fizz)라고도 알려져 있습니다).",
+    "glassware": "Flute Glass",
+    "garnish_kr": "오렌지 트위스트로 장식합니다 (선택 사항)."
+  },
+  {
+    "cocktail_id": 21,
+    "name_kr": "민트 줄렙",
+    "name_en": "MINT JULEP",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "60 ml Bourbon Whiskey",
+      "4 fresh Mint sprigs",
+      "1 tsp Powdered Sugar",
+      "2 tsp Water"
+    ],
+    "total_volume_ml": 60.0,
+    "calculated_abv": "미지원",
+    "method_kr": "줄렙 스테인리스 컵에 민트, 설탕, 물을 넣고 부드럽게 머들링합니다. 컵에 크러시드 아이스를 채우고 버번 위스키를 추가한 후, 컵에 성에가 낄 때까지 잘 저어줍니다.",
+    "glassware": "Julep Stainless Steel Cup",
+    "garnish_kr": "민트 새순으로 장식합니다."
+  },
+  {
+    "cocktail_id": 22,
+    "name_kr": "모히토",
+    "name_en": "MOJITO",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "45 ml White Cuban Ron",
+      "20 ml Fresh Lime Juice",
+      "6 pcs Mint Sprigs",
+      "2 tsp White Cane Sugar",
+      "Soda Water"
+    ],
+    "total_volume_ml": 65.0,
+    "calculated_abv": "미지원",
+    "method_kr": "민트 새순과 설탕, 라임 주스를 섞습니다. 소다수를 살짝 넣고 글라스에 얼음을 채웁니다. 럼을 붓고 소다수로 채워 넣습니다. 모든 재료가 섞이도록 가볍게 저어줍니다.",
+    "glassware": "Glass (Not specified, but traditionally Highball)",
+    "garnish_kr": "민트 새순과 라임 슬라이스로 장식합니다."
+  },
+  {
+    "cocktail_id": 23,
+    "name_kr": "모스코 뮬",
+    "name_en": "MOSCOW MULE",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "45 ml Smirnoff Vodka",
+      "120 ml Ginger Beer",
+      "10 ml Fresh lime juice"
+    ],
+    "total_volume_ml": 175.0,
+    "calculated_abv": "미지원",
+    "method_kr": "뮬 컵 또는 록스 글라스에 보드카와 진저 비어를 섞습니다. 라임 주스를 추가하고 모든 재료가 섞이도록 부드럽게 저어줍니다.",
+    "glassware": "Mule Cup or Rocks Glass",
+    "garnish_kr": "라임 슬라이스로 장식합니다."
+  },
+  {
+    "cocktail_id": 24,
+    "name_kr": "피냐 콜라다",
+    "name_en": "PINA COLADA",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "50 ml White Rum",
+      "30 ml Coconut Cream",
+      "50 ml Fresh Pineapple Juice"
+    ],
+    "total_volume_ml": 130.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음과 함께 전동 블렌더에 넣고 블렌딩합니다. 큰 글라스에 따르고 빨대와 함께 서빙합니다. (참고: 역사적으로 맛을 내기 위해 신선한 라임 주스 몇 방울이 추가되기도 했으며, 주스 대신 신선한 파인애플 4조각을 사용할 수도 있습니다).",
+    "glassware": "Large Glass",
+    "garnish_kr": "파인애플 슬라이스와 칵테일 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 25,
+    "name_kr": "피스코 사워",
+    "name_en": "PISCO SOUR",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "60 ml Pisco",
+      "30 ml Fresh Lemon Juice",
+      "20 ml Simple Syrup",
+      "1 Raw Egg White"
+    ],
+    "total_volume_ml": 110.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음과 함께 셰이커에 넣습니다. 흔든 후 차갑게 식힌 고블렛 글라스(goblet glass)에 걸러냅니다.",
+    "glassware": "Chilled Goblet Glass",
+    "garnish_kr": "향긋한 장식으로 아말고 비터스(Amargo bitters) 몇 대시를 위에 뿌립니다."
+  },
+  {
+    "cocktail_id": 26,
+    "name_kr": "씨 브리즈",
+    "name_en": "SEA BREEZE",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "40 ml Vodka",
+      "120 ml Cranberry Juice",
+      "30 ml Grapefruit Juice"
+    ],
+    "total_volume_ml": 190.0,
+    "calculated_abv": "미지원",
+    "method_kr": "얼음이 채워진 하이볼 글라스에 모든 재료를 넣고 만듭니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "오렌지 제스트와 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 27,
+    "name_kr": "섹스 온 더 비치",
+    "name_en": "SEX ON THE BEACH",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "40 ml Vodka",
+      "20 ml Peach Schnapps",
+      "40 ml Fresh Orange Juice",
+      "40 ml Cranberry Juice"
+    ],
+    "total_volume_ml": 140.0,
+    "calculated_abv": "미지원",
+    "method_kr": "얼음이 채워진 하이볼 글라스에 모든 재료를 넣고 만듭니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "오렌지 반 조각으로 장식합니다."
+  },
+  {
+    "cocktail_id": 28,
+    "name_kr": "싱가포르 슬링",
+    "name_en": "SINGAPORE SLING",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "30 ml Gin",
+      "15 ml Cherry liqueur",
+      "7.5 ml Cointreau",
+      "7.5 ml DOM BénédicUne",
+      "120 ml Fresh Pineapple Juice",
+      "15 ml Fresh Lime Juice",
+      "10 ml Grenadine Syrup",
+      "A dash of Angostura bitters"
+    ],
+    "total_volume_ml": 205.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 칵테일 셰이커에 붓습니다. 잘 흔들어준 후, 허리케인 글라스에 걸러냅니다.",
+    "glassware": "Hurricane Glass",
+    "garnish_kr": "파인애플과 마라스키노 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 29,
+    "name_kr": "데킬라 선라이즈",
+    "name_en": "TEQUILA SUNRISE",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "45ml Tequila",
+      "90 ml Fresh Orange Juice",
+      "15 ml Grenadine Syrup"
+    ],
+    "total_volume_ml": 150.0,
+    "calculated_abv": "미지원",
+    "method_kr": "데킬라와 오렌지 주스를 얼음이 채워진 하이볼 글라스에 직접 붓습니다. 색채 효과(일출)를 만들기 위해 그레나딘 시럽을 추가하며, 이때 젓지 않습니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "오렌지 반 조각 또는 오렌지 제스트로 장식합니다."
+  },
+  {
+    "cocktail_id": 30,
+    "name_kr": "베스퍼",
+    "name_en": "VESPER",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "45 ml Gin",
+      "15 ml Vodka",
+      "7.5 ml Lillet Blanc"
+    ],
+    "total_volume_ml": 67.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 칵테일 셰이커에 붓습니다. 흔든 후 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "레몬 제스트."
+  },
+  {
+    "cocktail_id": 31,
+    "name_kr": "좀비",
+    "name_en": "ZOMBIE",
+    "category": "Contemporary Classics",
+    "ingredients": [
+      "45 ml Jamaican dark rum",
+      "45 ml Gold Puerto Rican rum",
+      "30 ml Demerara Rum",
+      "20 ml Fresh lime juice",
+      "15 ml Falernum",
+      "15 ml Donn’s Mix*",
+      "1 tsp Grenadine syrup",
+      "1 dash Angostura bitters",
+      "6 drops Pernod"
+    ],
+    "total_volume_ml": 170.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 170그램의 크러시드 아이스와 함께 전동 블렌더에 넣습니다. 펄스 버튼으로 몇 초 동안 블렌딩합니다. 길쭉한 텀블러 글라스에 서빙합니다. (참고: *Donn’s Mix는 신선한 노란 자몽 주스 2파츠와 시나몬 시럽 1파츠입니다).",
+    "glassware": "Tall Tumbler Glass",
+    "garnish_kr": "민트 잎으로 장식합니다."
+  },
+  {
+    "cocktail_id": 32,
+    "name_kr": "알렉산더",
+    "name_en": "ALEXANDER",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml Cognac",
+      "30 ml Crème de Cacao (Brown)",
+      "30 ml Fresh Cream"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 칵테일 셰이커에 붓습니다. 흔든 후 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "신선하게 간 육두구(nutmeg)를 위에 뿌립니다."
+  },
+  {
+    "cocktail_id": 33,
+    "name_kr": "아메리카노",
+    "name_en": "AMERICANO",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml Bitter Campari",
+      "30 ml Sweet Red Vermouth",
+      "A splash of Soda Water"
+    ],
+    "total_volume_ml": 60.0,
+    "calculated_abv": "미지원",
+    "method_kr": "재료들을 얼음이 채워진 올드 패션드 글라스에 직접 섞습니다. 소다수를 살짝 추가합니다. 부드럽게 저어줍니다.",
+    "glassware": "Old Fashioned Glass",
+    "garnish_kr": "오렌지 반 조각과 레몬 제스트로 장식합니다."
+  },
+  {
+    "cocktail_id": 34,
+    "name_kr": "엔젤 페이스",
+    "name_en": "ANGEL FACE",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml Gin",
+      "30 ml Apricot Brandy",
+      "30 ml Calvados"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 칵테일 셰이커에 붓습니다. 흔든 후 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 35,
+    "name_kr": "에비에이션",
+    "name_en": "AVIATION",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Gin",
+      "15 ml Maraschino Liqueur",
+      "15 ml Fresh Lemon Juice",
+      "1 Bar Spoon Crème de Violette"
+    ],
+    "total_volume_ml": 75.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 넣습니다. 크러시드 아이스와 함께 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "마라스키노 체리 (선택 사항)."
+  },
+  {
+    "cocktail_id": 36,
+    "name_kr": "비트윈 더 시츠",
+    "name_en": "BETWEEN THE SHEETS",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml White Rum",
+      "30 ml Cognac",
+      "30 ml Triple Sec",
+      "20 ml Fresh Lemon Juice"
+    ],
+    "total_volume_ml": 110.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 넣습니다. 얼음과 함께 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 37,
+    "name_kr": "불바디에",
+    "name_en": "BOULEVARDIER",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Bourbon or Rye Whiskey",
+      "30 ml Bitter Campari",
+      "30 ml Sweet Red Vermouth"
+    ],
+    "total_volume_ml": 105.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "오렌지 제스트로 장식하며, 레몬 제스트는 선택 사항입니다."
+  },
+  {
+    "cocktail_id": 38,
+    "name_kr": "브랜디 크러스타",
+    "name_en": "BRANDY CRUSTA",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "52.5 ml Brandy",
+      "7.5 ml Maraschino Luxardo",
+      "1 Bar Spoon Curacao",
+      "15 ml Fresh Lemon Juice",
+      "1 Bar Spoon Simple Syrup",
+      "2 Dashes Aromatic Bitters"
+    ],
+    "total_volume_ml": 75.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음과 함께 믹싱 글라스에 섞고, 준비된 슬림 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Slim Cocktail Glass (Prepared)",
+    "garnish_kr": "오렌지(또는 레몬) 슬라이스를 글라스 림에 문지르고 분쇄된 흰 설탕에 담가 설탕이 테두리에 붙도록 준비합니다. 오렌지/레몬 껍질을 조심스럽게 말아 글라스 안쪽에 둘러 넣습니다."
+  },
+  {
+    "cocktail_id": 39,
+    "name_kr": "카지노",
+    "name_en": "CASINO",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "40 ml Old Tom Gin",
+      "10 ml Maraschino Liqueur",
+      "10 ml Fresh Lemon Juice",
+      "2 Dashes Orange Bitters"
+    ],
+    "total_volume_ml": 60.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 얼음이 든 차갑게 식힌 록스 글라스에 걸러냅니다.",
+    "glassware": "Chilled Rocks Glass with ice",
+    "garnish_kr": "레몬 제스트와 마라스키노 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 40,
+    "name_kr": "클로버 클럽",
+    "name_en": "CLOVER CLUB",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Gin",
+      "15 ml Raspberry Syrup",
+      "15 ml Fresh Lemon Juice",
+      "30 ml Egg White"
+    ],
+    "total_volume_ml": 75.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "신선한 라즈베리."
+  },
+  {
+    "cocktail_id": 41,
+    "name_kr": "다이키리",
+    "name_en": "DAIQUIRI",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "60 ml White Cuban Ron",
+      "20 ml Fresh Lime Juice",
+      "2 Bar Spoons Superfine Sugar"
+    ],
+    "total_volume_ml": 80.0,
+    "calculated_abv": "미지원",
+    "method_kr": "칵테일 셰이커에 모든 재료를 넣습니다. 설탕이 녹을 때까지 잘 저어줍니다. 얼음을 추가하고 흔듭니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 42,
+    "name_kr": "드라이 마티니",
+    "name_en": "DRY MARTINI",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "60 ml Gin",
+      "10 ml Dry Vermouth"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 마티니 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Martini Cocktail Glass",
+    "garnish_kr": "레몬 껍질에서 오일을 짜서 음료 위에 뿌리거나, 요청 시 그린 올리브로 장식합니다."
+  },
+  {
+    "cocktail_id": 43,
+    "name_kr": "진 피즈",
+    "name_en": "GIN FIZZ",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Gin",
+      "30 ml Fresh Lemon Juice",
+      "10 ml Simple Syrup",
+      "Splash of Soda Water"
+    ],
+    "total_volume_ml": 85.0,
+    "calculated_abv": "미지원",
+    "method_kr": "소다수를 제외한 모든 재료를 얼음과 함께 흔듭니다. 얇고 긴 텀블러 글라스에 붓고, 소다수를 살짝 채워 넣습니다. (참고: 얼음 없이 서빙합니다).",
+    "glassware": "Thin Tall Tumbler Glass",
+    "garnish_kr": "레몬 슬라이스로 장식하며, 레몬 제스트는 선택 사항입니다."
+  },
+  {
+    "cocktail_id": 44,
+    "name_kr": "행키 팽키",
+    "name_en": "HANKY PANKY",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml London Dry Gin",
+      "45 ml Sweet Red Vermouth",
+      "7.5 ml Fernet Branca"
+    ],
+    "total_volume_ml": 97.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "오렌지 제스트."
+  },
+  {
+    "cocktail_id": 45,
+    "name_kr": "존 콜린스",
+    "name_en": "JOHN COLLINS",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Gin",
+      "30 ml Fresh Lemon Juice",
+      "15 ml Simple Syrup",
+      "60 ml Soda Water"
+    ],
+    "total_volume_ml": 150.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 하이볼 글라스에 직접 붓습니다. 부드럽게 저어줍니다. (참고: 톰 콜린스(Tom Collins)를 위해서는 '올드 톰(Old Tom)' 진을 사용합니다).",
+    "glassware": "Highball Glass",
+    "garnish_kr": "레몬 슬라이스와 마라스키노 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 46,
+    "name_kr": "라스트 워드",
+    "name_en": "LAST WORD",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "22.5 ml Gin",
+      "22.5 ml Green Chartreuse",
+      "22.5 ml Maraschino Liqueur",
+      "22.5 ml Fresh Lime Juice"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 넣습니다. 얼음과 함께 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 47,
+    "name_kr": "맨해튼",
+    "name_en": "MANHATTAN",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "50 ml Rye Whiskey",
+      "20 ml Sweet Red Vermouth",
+      "1 dash Angostura Bitters"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "칵테일 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 48,
+    "name_kr": "마르티네즈",
+    "name_en": "MARTINEZ",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml London Dry Gin",
+      "45 ml Sweet Red Vermouth",
+      "1 Bar Spoon Maraschino Liqueur",
+      "2 Dashes Orange Bitters"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "레몬 제스트."
+  },
+  {
+    "cocktail_id": 49,
+    "name_kr": "메리 픽퍼드",
+    "name_en": "MARY PICKFORD",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml White Rum",
+      "45 ml Fresh Pineapple Juice",
+      "7.5 ml Maraschino Liqueur",
+      "5 ml Grenadine Syrup"
+    ],
+    "total_volume_ml": 102.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 50,
+    "name_kr": "몽키 글랜드",
+    "name_en": "MONKEY GLAND",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Dry Gin",
+      "45 ml Fresh Orange Juice",
+      "1 Table Spoon Absinthe",
+      "1 Table Spoon Grenadine Syrup"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 51,
+    "name_kr": "네그로니",
+    "name_en": "NEGRONI",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml Gin",
+      "30 ml Bitter Campari",
+      "30 ml Sweet Red Vermouth"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 차갑게 식힌 올드 패션드 글라스에 직접 붓고, 부드럽게 저어줍니다.",
+    "glassware": "Chilled Old Fashioned Glass",
+    "garnish_kr": "오렌지 반 조각으로 장식합니다."
+  },
+  {
+    "cocktail_id": 52,
+    "name_kr": "올드 패션드",
+    "name_en": "OLD FASHIONED",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Bourbon or Rye Whiskey",
+      "1 Sugar Cube",
+      "Few Dashes Angostura Bitters",
+      "Few Dashes Plain Water"
+    ],
+    "total_volume_ml": 45.0,
+    "calculated_abv": "미지원",
+    "method_kr": "각설탕을 올드 패션드 글라스에 넣고 비터스로 적신 후, 소량의 물을 추가합니다. 설탕이 녹을 때까지 머들링합니다. 글라스에 얼음 조각을 채우고 위스키를 넣습니다. 부드럽게 저어줍니다.",
+    "glassware": "Old Fashioned Glass",
+    "garnish_kr": "오렌지 슬라이스 또는 제스트와 칵테일 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 53,
+    "name_kr": "파라다이스",
+    "name_en": "PARADISE",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml Gin",
+      "20 ml Apricot Brandy",
+      "15 ml Fresh Orange Juice"
+    ],
+    "total_volume_ml": 65.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 54,
+    "name_kr": "플랜터스 펀치",
+    "name_en": "PLANTERS PUNCH",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Jamaican Rum",
+      "15 ml Lime Juice",
+      "30 ml Sugar Cane Juice"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 작은 텀블러 또는 일반적인 테라코타 글라스에 직접 붓습니다. (참고: 물, 얼음 또는 신선한 주스로 희석 정도를 취향에 따라 조절할 수 있습니다).",
+    "glassware": "Small Tumbler or Terracotta Glass",
+    "garnish_kr": "오렌지 제스트로 장식합니다."
+  },
+  {
+    "cocktail_id": 55,
+    "name_kr": "포르토 플립",
+    "name_en": "PORTO FLIP",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "15 ml Brandy",
+      "45 ml Red Tawny Port Wine",
+      "10 ml Egg Yolk"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "신선하게 간 육두구(nutmeg)를 뿌립니다."
+  },
+  {
+    "cocktail_id": 56,
+    "name_kr": "라모스 피즈",
+    "name_en": "RAMOS FIZZ",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Gin",
+      "15 ml Fresh Lime Juice",
+      "15 ml Fresh Lemon Juice",
+      "30 ml Sugar Syrup",
+      "60 ml Cream",
+      "30ml Egg white",
+      "3 Dashes Orange Flower Water",
+      "2 Drops Vanilla Extract",
+      "Soda Water"
+    ],
+    "total_volume_ml": 195.0,
+    "calculated_abv": "미지원",
+    "method_kr": "소다수를 제외한 모든 재료를 얼음이 든 칵테일 셰이커에 붓고 2분 동안 흔듭니다. 더블 스트레인(이중 거르기)한 후 음료를 다시 셰이커에 붓고 얼음 없이 1분 동안 강하게 흔듭니다. 하이볼 글라스에 걸러낸 후 소다수를 채워 넣습니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 57,
+    "name_kr": "러스티 네일",
+    "name_en": "RUSTY NAIL",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Scotch Whisky",
+      "25ml Drambuie"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 올드 패션드 글라스에 직접 붓습니다. 부드럽게 저어줍니다.",
+    "glassware": "Old Fashioned Glass",
+    "garnish_kr": "레몬 제스트로 장식합니다."
+  },
+  {
+    "cocktail_id": 58,
+    "name_kr": "사제락",
+    "name_en": "SAZERAC",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "50 ml Cognac",
+      "10 ml Absinthe",
+      "1 Sugar Cube",
+      "2 Dashes Peychaud's Bitters"
+    ],
+    "total_volume_ml": 50.0,
+    "calculated_abv": "미지원",
+    "method_kr": "차갑게 식힌 올드 패션드 글라스를 압생트로 헹구고(rinse), 크러시드 아이스를 넣고 따로 둡니다. 남은 재료들을 믹싱 글라스에서 얼음과 함께 저어줍니다. 준비된 글라스에서 얼음과 남은 압생트를 버리고, 섞인 음료를 글라스에 걸러냅니다. (참고: 미국 남북전쟁 후 호밀 위스키가 코냑을 대체하면서 오리지널 레시피가 변경되었습니다).",
+    "glassware": "Old Fashioned Glass (Rinsed)",
+    "garnish_kr": "레몬 제스트로 장식합니다."
+  },
+  {
+    "cocktail_id": 59,
+    "name_kr": "사이드카",
+    "name_en": "SIDECAR",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "50 ml Cognac",
+      "20 ml Triple Sec",
+      "20 ml Fresh Lemon Juice"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 60,
+    "name_kr": "스팅거",
+    "name_en": "STINGER",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "50 ml Cognac",
+      "20 ml White Crème de Menthe"
+    ],
+    "total_volume_ml": 70.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 마티니 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Martini Cocktail Glass",
+    "garnish_kr": "민트 잎 (선택 사항)."
+  },
+  {
+    "cocktail_id": 61,
+    "name_kr": "턱시도",
+    "name_en": "TUXEDO",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml Old Tom Gin",
+      "30 ml Dry Vermouth",
+      "1/2 Bar Spoon Maraschino Liqueur",
+      "1/4 Bar Spoon of Absinthe",
+      "3 Dashes Orange Bitters"
+    ],
+    "total_volume_ml": 60.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 마티니 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Martini Cocktail Glass",
+    "garnish_kr": "체리와 레몬 제스트로 장식합니다."
+  },
+  {
+    "cocktail_id": 62,
+    "name_kr": "뷰 카레",
+    "name_en": "VIEUX CARRÉ",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "30 ml Rye Whiskey",
+      "30 ml Cognac",
+      "30 ml Sweet Vermouth",
+      "1 Bar Spoon Bénédictine",
+      "2 Dashes Peychaud's Bitters"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "오렌지 제스트와 마라스키노 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 63,
+    "name_kr": "위스키 사워",
+    "name_en": "WHISKEY SOUR",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "45 ml Bourbon Whiskey",
+      "25 ml Fresh Lemon Juice",
+      "20 ml Sugar Syrup",
+      "30 ml Egg White (Optional)"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 칵테일 셰이커에 붓습니다. 잘 흔들어줍니다. 코블러 글라스에 걸러냅니다. (만약 '온 더 록스(On the rocks)'로 서빙한다면, 얼음이 채워진 올드 패션드 글라스에 걸러냅니다). (참고: 달걀 흰자를 사용하는 경우 거품을 내기 위해 더 세게 흔들어줍니다).",
+    "glassware": "Cobbler Glass (or Old Fashioned Glass)",
+    "garnish_kr": "오렌지 반 조각과 마라스키노 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 64,
+    "name_kr": "화이트 레이디",
+    "name_en": "WHITE LADY",
+    "category": "The Unforgettables",
+    "ingredients": [
+      "40 ml Gin",
+      "30 ml Triple Sec",
+      "20 ml Fresh Lemon Juice"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 65,
+    "name_kr": "바라쿠다",
+    "name_en": "BARRACUDA",
+    "category": "New Era",
+    "ingredients": [
+      "45 ml Gold Rum",
+      "15 ml Galliano",
+      "60 ml Fresh Pineapple Juice",
+      "1 dash Fresh Lime Juice",
+      "Top up with Prosecco"
+    ],
+    "total_volume_ml": 120.0,
+    "calculated_abv": "미지원",
+    "method_kr": "프로세코를 제외한 모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔듭니다. 얼음이 채워진 차갑게 식힌 하이볼 글라스에 걸러내고, 프로세코를 채워 넣습니다.",
+    "glassware": "Chilled Highball Glass",
+    "garnish_kr": "파인애플과 체리, 추가적인 향을 위한 민트 새순 (선택 사항)."
+  },
+  {
+    "cocktail_id": 66,
+    "name_kr": "브람블",
+    "name_en": "BRAMBLE",
+    "category": "New Era",
+    "ingredients": [
+      "50 ml Gin",
+      "25 ml Fresh Lemon Juice",
+      "12.5 ml Sugar Syrup",
+      "15 ml Crème de Mûre"
+    ],
+    "total_volume_ml": 87.5,
+    "calculated_abv": "미지원",
+    "method_kr": "크렘 드 뮤르를 제외한 모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔듭니다. 크러시드 아이스가 채워진 차갑게 식힌 올드 패션드 글라스에 걸러낸 후, 블랙베리 리큐어(크렘 드 뮤르)를 음료 위에 원을 그리며 부어줍니다.",
+    "glassware": "Chilled Old Fashioned Glass filled with crushed ice",
+    "garnish_kr": "레몬 슬라이스와 블랙베리 (선택 사항)로 장식합니다."
+  },
+  {
+    "cocktail_id": 67,
+    "name_kr": "비즈 니즈",
+    "name_en": "BEE’S KNEES",
+    "category": "New Era",
+    "ingredients": [
+      "52.5 ml Dry Gin",
+      "2 teaspoons Honey Syrup",
+      "22.5 ml Fresh Lemon Juice",
+      "22.5 ml Fresh Orange Juice"
+    ],
+    "total_volume_ml": 97.5,
+    "calculated_abv": "미지원",
+    "method_kr": "꿀을 레몬 및 오렌지 주스와 함께 녹을 때까지 저어준 후, 진을 넣고 얼음과 함께 흔듭니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "레몬 또는 오렌지 제스트로 장식합니다 (선택 사항)."
+  },
+  {
+    "cocktail_id": 68,
+    "name_kr": "카찬차라",
+    "name_en": "CACHANCHARA",
+    "category": "New Era",
+    "ingredients": [
+      "60 ml Cuban Aguardiente",
+      "15 ml Fresh Lime Juice",
+      "15 ml Raw Honey",
+      "50 ml Water"
+    ],
+    "total_volume_ml": 140.0,
+    "calculated_abv": "미지원",
+    "method_kr": "꿀을 물과 라임 주스와 섞고 이 혼합물을 글라스 바닥과 측면에 펼칩니다. 크러시드 아이스를 넣고 럼을 추가합니다. 바닥에서 위로 활발하게 저어 마무리합니다.",
+    "glassware": "Glass (Not specified)",
+    "garnish_kr": "라임 웨지."
+  },
+  {
+    "cocktail_id": 69,
+    "name_kr": "다크 앤 스토미",
+    "name_en": "DARK ‘N’ STORMY",
+    "category": "New Era",
+    "ingredients": [
+      "60 ml Goslings Rum",
+      "100 ml Ginger Beer"
+    ],
+    "total_volume_ml": 160.0,
+    "calculated_abv": "미지원",
+    "method_kr": "얼음이 채워진 하이볼 글라스에 진저 비어를 붓고, 럼을 위에 띄웁니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "라임 웨지 또는 슬라이스로 장식합니다."
+  },
+  {
+    "cocktail_id": 70,
+    "name_kr": "에스프레소 마티니",
+    "name_en": "ESPRESSO MARTINI",
+    "category": "New Era",
+    "ingredients": [
+      "50 ml Vodka",
+      "30 ml Kahlúa",
+      "10 ml Sugar Syrup",
+      "1 strong Espresso"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 71,
+    "name_kr": "페르난디토",
+    "name_en": "FERNANDITO",
+    "category": "New Era",
+    "ingredients": [
+      "50 ml Fernet Branca",
+      "Fill up with Cola"
+    ],
+    "total_volume_ml": 50.0,
+    "calculated_abv": "미지원",
+    "method_kr": "페르넷 브랑카를 얼음이 든 더블 올드 패션드 글라스에 붓고, 콜라로 가득 채웁니다. 부드럽게 저어줍니다.",
+    "glassware": "Double Old Fashioned Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 72,
+    "name_kr": "프렌치 마티니",
+    "name_en": "FRENCH MARTINI",
+    "category": "New Era",
+    "ingredients": [
+      "45 ml Vodka",
+      "15 ml Raspberry Liqueur",
+      "15 ml Fresh Pineapple Juice"
+    ],
+    "total_volume_ml": 75.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "레몬 껍질에서 오일을 짜서 음료 위에 뿌립니다."
+  },
+  {
+    "cocktail_id": 73,
+    "name_kr": "일레갈",
+    "name_en": "ILLEGAL",
+    "category": "New Era",
+    "ingredients": [
+      "30 ml Espadin Mezcal",
+      "15 ml Jamaica Overproof White Rum",
+      "15 ml Falernum",
+      "1 Bar Spoon Maraschino Luxardo",
+      "22.5 ml Fresh Lime Juice",
+      "15 ml Simple Syrup",
+      "30 ml Egg White (Optional)"
+    ],
+    "total_volume_ml": 97.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 셰이커에 붓습니다. 얼음과 함께 힘차게 흔듭니다. 차갑게 식힌 칵테일 글라스에 걸러내거나, 전통적인 점토 또는 테라코타 머그에 '온 더 록스'로 제공합니다.",
+    "glassware": "Chilled Cocktail Glass (or clay/terracotta mug)",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 74,
+    "name_kr": "레몬 드롭 마티니",
+    "name_en": "LEMON DROP MARTINI",
+    "category": "New Era",
+    "ingredients": [
+      "30 ml Vodka Citron",
+      "20 ml Triple Sec",
+      "15 ml Fresh Lemon Juice"
+    ],
+    "total_volume_ml": 65.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "글라스 주변에 설탕 림으로 장식합니다."
+  },
+  {
+    "cocktail_id": 75,
+    "name_kr": "네이키드 앤 페이머스",
+    "name_en": "NAKED AND FAMOUS",
+    "category": "New Era",
+    "ingredients": [
+      "22.5 ml Mezcal",
+      "22.5 ml Yellow Chartreuse",
+      "22.5 ml Aperol",
+      "22.5 ml Fresh Lime Juice"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 76,
+    "name_kr": "뉴욕 사워",
+    "name_en": "NEW YORK SOUR",
+    "category": "New Era",
+    "ingredients": [
+      "60 ml Rye Whiskey or Bourbon",
+      "22.5 ml Simple syrup",
+      "30 ml Fresh lemon juice",
+      "30 ml Egg white",
+      "15 ml Red wine (Shiraz or Malbech)"
+    ],
+    "total_volume_ml": 127.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 셰이커에 붓습니다. 얼음과 함께 힘차게 흔듭니다. 얼음이 채워진 차갑게 식힌 록스 글라스에 걸러내고, 와인을 위에 띄웁니다.",
+    "glassware": "Chilled Rocks Glass with ice",
+    "garnish_kr": "레몬 또는 오렌지 제스트와 체리로 장식합니다."
+  },
+  {
+    "cocktail_id": 77,
+    "name_kr": "올드 쿠반",
+    "name_en": "OLD CUBAN",
+    "category": "New Era",
+    "ingredients": [
+      "6/8 pcs Mint Leaves",
+      "45 ml Aged Rum",
+      "22.5 ml Fresh Lime Juice",
+      "30 ml Simple Syrup",
+      "2 Dashes Angostura Bitters",
+      "60 ml Brut Champagne or Prosecco"
+    ],
+    "total_volume_ml": 97.5,
+    "calculated_abv": "미지원",
+    "method_kr": "스파클링 와인을 제외한 모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔듭니다. 차갑게 식힌 우아한 칵테일 글라스에 걸러내고, 스파클링 와인으로 채워 넣습니다.",
+    "glassware": "Chilled Elegant Cocktail Glass",
+    "garnish_kr": "민트 새순으로 장식합니다."
+  },
+  {
+    "cocktail_id": 78,
+    "name_kr": "팔로마",
+    "name_en": "PALOMA",
+    "category": "New Era",
+    "ingredients": [
+      "50 ml 100% Agave Tequila",
+      "5 ml Fresh lime",
+      "A pitch of Salt",
+      "100 ml Pink Grapefruit Soda"
+    ],
+    "total_volume_ml": 155.0,
+    "calculated_abv": "미지원",
+    "method_kr": "데킬라를 하이볼 글라스에 붓고, 라임 주스를 짜 넣습니다. 얼음과 소금을 추가하고, 핑크 자몽 소다로 가득 채웁니다. 부드럽게 저어줍니다.",
+    "glassware": "Highball Glass",
+    "garnish_kr": "라임 슬라이스로 장식합니다."
+  },
+  {
+    "cocktail_id": 79,
+    "name_kr": "페이퍼 플레인",
+    "name_en": "PAPER PLANE",
+    "category": "New Era",
+    "ingredients": [
+      "30 ml Bourbon Whiskey",
+      "30 ml Amaro Nonino",
+      "30 ml Aperol",
+      "30 ml Fresh Lemon Juice"
+    ],
+    "total_volume_ml": 120.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 80,
+    "name_kr": "페니실린",
+    "name_en": "PENICILLIN",
+    "category": "New Era",
+    "ingredients": [
+      "60 ml Blended Scotch Whisky",
+      "7.5 ml Lagavulin 16y Whisky",
+      "22.5 ml Fresh Lemon Juice",
+      "22.5 ml Honey Syrup",
+      "2-3 quarter size Sliced Fresh Ginger"
+    ],
+    "total_volume_ml": 105.0,
+    "calculated_abv": "미지원",
+    "method_kr": "셰이커에 신선한 생강을 머들링하고, 아일레이 싱글 몰트 위스키(라가불린)를 제외한 나머지 재료를 추가합니다. 셰이커에 얼음을 채우고 흔듭니다. 얼음이 든 차갑게 식힌 올드 패션드 글라스에 이중으로 걸러내고, 싱글 몰트 위스키를 위에 띄웁니다.",
+    "glassware": "Chilled Old Fashioned Glass with ice",
+    "garnish_kr": "설탕에 절인 생강으로 장식합니다."
+  },
+  {
+    "cocktail_id": 81,
+    "name_kr": "러시안 스프링 펀치",
+    "name_en": "RUSSIAN SPRING PUNCH",
+    "category": "New Era",
+    "ingredients": [
+      "25 ml Vodka",
+      "25 ml Fresh Lemon Juice",
+      "15 ml Crème de Cassis",
+      "10 ml Sugar syrup",
+      "Top up Sparkling wine"
+    ],
+    "total_volume_ml": 75.0,
+    "calculated_abv": "미지원",
+    "method_kr": "스파클링 와인을 제외한 모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔듭니다. 얼음이 채워진 차갑게 식힌 긴 텀블러 글라스에 걸러내고, 스파클링 와인을 채워 넣습니다.",
+    "glassware": "Chilled Tall Tumbler Glass with ice",
+    "garnish_kr": "블랙베리로 장식하며, 레몬 슬라이스도 선택 사항입니다."
+  },
+  {
+    "cocktail_id": 82,
+    "name_kr": "사우스사이드",
+    "name_en": "SOUTHSIDE",
+    "category": "New Era",
+    "ingredients": [
+      "60 ml London Dry Gin",
+      "30 ml Fresh Lemon Juice",
+      "15 ml Simple Syrup",
+      "5/6 Mint Leaves",
+      "30 ml Egg White (Optional)"
+    ],
+    "total_volume_ml": 105.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 이중으로 걸러냅니다. (참고: 달걀 흰자를 사용하는 경우, 강하게 흔들어줍니다).",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "민트 새순으로 장식합니다."
+  },
+  {
+    "cocktail_id": 83,
+    "name_kr": "스파이시 피프티",
+    "name_en": "SPICY FIFTY",
+    "category": "New Era",
+    "ingredients": [
+      "50 ml Vodka Vanilla",
+      "15 ml Elderflower Cordial",
+      "15 ml Fresh Lemon Juice",
+      "10 ml Monin Honey Syrup",
+      "2 thin Slices Red Chili Pepper"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 이중으로 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "붉은 고추로 장식합니다."
+  },
+  {
+    "cocktail_id": 84,
+    "name_kr": "스프리츠",
+    "name_en": "SPRITZ",
+    "category": "New Era",
+    "ingredients": [
+      "90 ml Prosecco",
+      "60 ml Aperol",
+      "Splash of Soda water"
+    ],
+    "total_volume_ml": 150.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 채워진 와인 글라스에 넣고 만듭니다. 부드럽게 저어줍니다. (참고: Aperol 대신 Campari, Cynar 또는 Select를 사용하는 다른 버전의 스프리츠도 있습니다).",
+    "glassware": "Wine Glass filled with ice",
+    "garnish_kr": "오렌지 슬라이스로 장식합니다."
+  },
+  {
+    "cocktail_id": 85,
+    "name_kr": "서퍼링 바스타드",
+    "name_en": "SUFFERING BASTARD",
+    "category": "New Era",
+    "ingredients": [
+      "30 ml Cognac or Brandy",
+      "30 ml Gin",
+      "15 ml Fresh Lime Juice",
+      "2 Dashes Angostura Bitters",
+      "Top up Ginger beer"
+    ],
+    "total_volume_ml": 75.0,
+    "calculated_abv": "미지원",
+    "method_kr": "진저 비어를 제외한 모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔듭니다. 거르지 않고 콜린스 글라스 또는 오리지널 S. Bastard 머그에 붓고, 진저 비어를 채워 넣습니다.",
+    "glassware": "Collins Glass (or S. Bastard mug)",
+    "garnish_kr": "민트 새순과 오렌지 슬라이스 (선택 사항)로 장식합니다."
+  },
+  {
+    "cocktail_id": 86,
+    "name_kr": "티퍼레리",
+    "name_en": "TIPPERARY",
+    "category": "New Era",
+    "ingredients": [
+      "50 ml Irish Whiskey",
+      "25 ml Sweet Red Vermouth",
+      "15 ml Green Chartreuse",
+      "2 Dashes Angostura Bitters"
+    ],
+    "total_volume_ml": 90.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 마티니 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Martini Cocktail Glass",
+    "garnish_kr": "오렌지 슬라이스로 장식합니다."
+  },
+  {
+    "cocktail_id": 87,
+    "name_kr": "토미즈 마가리타",
+    "name_en": "TOMMY’S MARGARITA",
+    "category": "New Era",
+    "ingredients": [
+      "45 ml Tequila 100% agave",
+      "15 ml Fresh Lime Juice",
+      "2 Bar Spoon of Agave Nectar"
+    ],
+    "total_volume_ml": 60.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 얼음이 채워진 차갑게 식힌 록스 글라스에 걸러냅니다.",
+    "glassware": "Chilled Rocks Glass with ice",
+    "garnish_kr": "라임 슬라이스로 장식합니다."
+  },
+  {
+    "cocktail_id": 88,
+    "name_kr": "트리니다드 사워",
+    "name_en": "TRINIDAD SOUR",
+    "category": "New Era",
+    "ingredients": [
+      "45 ml Angostura Bitters",
+      "30 ml Orgeat Syrup",
+      "22.5 ml Fresh Lemon Juice",
+      "15 ml Rye Whiskey"
+    ],
+    "total_volume_ml": 112.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 얼음이 든 믹싱 글라스에 붓습니다. 잘 저어줍니다. 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 89,
+    "name_kr": "옐로우 버드",
+    "name_en": "YELLOW BIRD",
+    "category": "New Era",
+    "ingredients": [
+      "30 ml White rum",
+      "15 ml Galliano",
+      "15 ml Triple Sec",
+      "15 ml Fresh Lime Juice"
+    ],
+    "total_volume_ml": 75.0,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 칵테일 셰이커에 붓고, 얼음과 함께 잘 흔든 후, 차갑게 식힌 칵테일 글라스에 걸러냅니다.",
+    "glassware": "Chilled Cocktail Glass",
+    "garnish_kr": "장식 없음."
+  },
+  {
+    "cocktail_id": 90,
+    "name_kr": "베.엔.토.",
+    "name_en": "VE.N.TO.",
+    "category": "New Era",
+    "ingredients": [
+      "45 ml White Smooth Grappa",
+      "22.5 ml Fresh lemon Juice",
+      "15 ml Honey mix (replace water with chamomile)*",
+      "15 ml Chamomile cordial",
+      "30 ml Egg White (Optional)"
+    ],
+    "total_volume_ml": 97.5,
+    "calculated_abv": "미지원",
+    "method_kr": "모든 재료를 셰이커에 붓습니다. 얼음과 함께 힘차게 흔듭니다. 얼음이 채워진 차갑게 식힌 작은 텀블러 글라스에 걸러냅니다. (참고: *원하는 경우 꿀 믹스의 물을 캐모마일 인퓨전으로 대체할 수 있습니다).",
+    "glassware": "Chilled Small Tumbler Glass with ice",
+    "garnish_kr": "레몬 제스트와 흰 포도로 장식합니다."
+  }
+]

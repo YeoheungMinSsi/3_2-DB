@@ -1,0 +1,38 @@
+
+  {
+    "glass_id": 1,  -- 아이디
+    "name_en": "Flute Glass",  -- 칵테일 잔 이름(영어)
+    "name_kr": "플루트 글라스",  -- 칵테일 잔 이름(한글)
+    "sub_categories_kr": "스파클링 와인 잔",  -- 칵테일 잔 서브 카테고리(한글)
+    "sub_categories_en": "Sparkling Wine Glass",  -- 칵테일 잔 서브 카테고리(영어)
+    "categories_kr": "스템웨어",  -- 칵테일 잔 카테고리(한글)
+    "categories_en": "Stemware",  -- 칵테일 잔 카테고리(영어)
+    "avg_volume_ml": "120ml~180ml",  -- 칵테일 잔 평균 용량(ml)
+    "avg_volume_oz": "4oz~6oz",  -- 칵테일 잔 평균 용량(온스)
+    "expain_kr": [  -- 칵테일 잔 설명(한글)
+      "길고 얇으며, 잔 입구가 좁음",
+      "높고 좁은 형태로 인해 탄산이 오래 유지",
+      "탄산을 오래 보존하고 기포가 올라오는 것을 보기 위함"
+    ],
+    "iba_cocktail_examples_kr": [  -- IBA 칵테일 예시(한글)
+      "벨리니",
+      "프렌치 75",
+      "미모사"
+    ],
+    "iba_cocktail_examples_en": [  -- IBA 칵테일 예시(영어)
+      "BELLINI",
+      "FRENCH 75",
+      "MIMOSA"
+    ],
+    "serving_styles_kr": [  -- 칵테일 잔 서빙 스타일(한글)
+      -- 칵테일이 만들어진 목적, 소비되는 시점
+      "스파클링"
+    ],
+    "serving_styles_en": [  -- 칵테일 잔 서빙 스타일(영어)
+      "SPARKLING"
+    ],
+    "serve_temperature_kr": "차갑게",  -- 칵테일 잔 서빙 온도(한글)
+    "serve_temperature_en": "Chilled",
+    "ice_method_kr": "얼음 없음 (차갑게 보관 후 따름)",  -- 칵테일 잔 얼음 방법(한글)
+    "ice_method_en": "No Ice (Chilled Glass)"
+  },
