@@ -37,7 +37,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 drinkMenuGroups={drinkMenuGroups} // 임포트한 음료 메뉴 데이터 전달
                 bartendingMenuGroups={bartendingMenuGroups} // 임포트한 바텐딩 메뉴 데이터 전달
             />
-                //  {/* 💡 Nav 컴포넌트 사용 */}
+                {/* //  💡 Nav 컴포넌트 사용 */}
 
             <div id='container'>
                 {children}

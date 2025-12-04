@@ -1,0 +1,54 @@
+# GitHub Actions 워크플로우 정의
+name: Firebase Hosting CI/CD
+
+# main 브랜치에 push가 발생했을 때 이 워크플로우를 실행합니다.
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # 수동 실행을 허용합니다.
+
+jobs:
+  build_and_deploy:
+    name: Build & Deploy to Firebase Hosting
+    runs-on: ubuntu-latest # Linux 환경에서 실행
+
+    steps:
+      # 1. 코드 체크아웃 (리포지토리 코드 가져오기)
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Node.js 환경 설정
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm' # pnpm 캐시 사용 설정
+
+      # 3. pnpm 설치 및 의존성 복원
+      - name: Install dependencies (pnpm)
+        run: npm install -g pnpm && pnpm install --frozen-lockfile
+
+      # 4. 🚨 환경 변수 설정
+      # VITE_API_URL은 빌드 시점에 코드에 삽입되어야 하므로,
+      # .env.production 파일의 내용을 덮어쓰거나 여기에 직접 설정해야 합니다.
+      # 이 예시에서는 .env.production 파일이 이미 리포지토리에 있다고 가정합니다.
+      # 만약 환경 변수 값이 민감하다면, 이 부분에 GitHub Secrets를 사용하여
+      # .env.production 파일을 생성하는 로직을 추가해야 합니다.
+      - name: Setup Environment Variables (Assume already set in .env.production)
+        run: echo "Environment variables are ready for build."
+        
+      # 5. 🚨 Vite 클린 빌드 (가장 중요한 단계)
+      - name: Run Vite Production Build
+        run: pnpm run build
+      
+      # 6. Firebase Hosting에 배포
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }} # 기본 토큰
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_TOKEN }} # 1단계에서 생성한 토큰 사용
+          channelId: live # 라이브 채널에 배포
+          projectId: data-button-480205-c9 # 🚨 사용자님의 GCP 프로젝트 ID로 교체
+          target: hosting # 호스팅 서비스에 배포
+          # Vite의 빌드 결과물은 dist 폴더에 있으므로 public 폴더는 명시적으로 설정할 필요 없음
