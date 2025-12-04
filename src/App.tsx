@@ -1,64 +1,51 @@
-// src/App.tsx
-
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home'; // Home 컴포넌트 임포트
+import Layout from './components/Layout'; // Layout 컴포넌트 임포트
+import type { CocktailData } from './types/cocktail'; // 타입 임포트
 import './App.css';
 
-// 💡 [컴포넌트]
-import Nav from './components/Nav';
-import Home from './components/Home';
-import NotFoundContent from './components/NotFoundContent';
-import CocktailListPage from './components/CocktailListPage';
-import DrinkCategoryPage from './components/DrinkCategoryPage';
-import ToolsPage from './components/ToolsPage';
-import TechniquesPage from './components/TechniquesPage';
-import RelatedPage from './components/RelatedPage';
-import CocktailClassificationPage from './components/CocktailClassificationPage';
+// 💡 1. VITE 환경 변수에서 API 기본 URL을 가져옵니다. (배포 주소)
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const COCKTAIL_API_URL = `${API_BASE_URL}/cocktails`;
 
-// 💡 [훅]
-import { useCocktailData } from './hooks/useCocktailData';
-import { useRouting } from './hooks/useRouting';
+function App() {
+  const [allCocktails, setAllCocktails] = useState<CocktailData[]>([]);
+  const [currentCocktail, setCurrentCocktail] = useState<CocktailData | null>(null);
+  const [isError, setIsError] = useState(false);
 
-// 💡 [설정] 라우트 목록만 임포트
-import { allRoutes } from './config/menuRoutes';
+  // 💡 2. 데이터 로딩 로직 (App에서 상태 관리)
+  useEffect(() => {
+    // Cloud Run 주소로 API 호출
+    fetch(COCKTAIL_API_URL)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data: CocktailData[]) => {
+        setAllCocktails(data);
+        setIsError(false); // 성공
+      })
+      .catch(error => {
+        console.error("Failed to fetch cocktails:", error);
+        setIsError(true); // 실패
+      });
+  }, []);
 
-
-// MainApp 컴포넌트: 로직은 Hook으로, 설정은 Config로 위임되어 간결해졌습니다.
-const MainApp: React.FC = () => {
-  // 1. 라우팅 로직 사용
-  const { navigateTo, drinkMenuGroups, bartendingMenuGroups } = useRouting();
-
-  // 2. 데이터/상태 로직 사용
-  const {
-    allCocktails,
-    currentCocktail,
-    isLoading,
-    isError,
-    handleCardClick
-  } = useCocktailData(navigateTo);
-
-  // 로딩 UI는 별도 컴포넌트(StatusIndicator)로 분리 가능하나, 현재 App.tsx에 유지합니다.
-  if (isLoading) {
-    return (
-      <div className='w-full max-w-[1440px] mx-auto flex justify-center items-center p-16 min-h-[500px]'>
-        <span className="loading loading-spinner loading-lg text-amber-500"></span>
-        <p className="ml-3 text-lg text-gray-600">데이터를 로드하는 중입니다...</p>
-      </div>
-    );
-  }
+  // 카드 클릭 핸들러 (랜덤 칵테일 선택 로직)
+  const handleCardClick = () => {
+    if (allCocktails.length > 0) {
+      const randomIndex = Math.floor(Math.random() * allCocktails.length);
+      setCurrentCocktail(allCocktails[randomIndex]);
+    }
+  };
 
   return (
-    <div id='main'>
-      {/* 1. Nav 컴포넌트: 메뉴 설정과 네비게이션 함수를 전달 */}
-      <Nav
-        navigateTo={navigateTo as any}
-        drinkMenuGroups={drinkMenuGroups}
-        bartendingMenuGroups={bartendingMenuGroups}
-      />
-
-      <div id='container'>
+    <Router>
+      <Layout>
         <Routes>
-          {/* 2. 홈 라우트 */}
           <Route
             path="/"
             element={
@@ -67,54 +54,16 @@ const MainApp: React.FC = () => {
                 handleCardClick={handleCardClick}
                 allCocktails={allCocktails}
                 isError={isError}
+                // 💡 Home.tsx에 필요한 apiBaseUrl Props 전달
+                apiBaseUrl={API_BASE_URL}
               />
             }
           />
-
-          {/* 3. 동적 라우트 등록: 설정 파일(allRoutes)을 기반으로 순회 */}
-          {allRoutes.map((route, index) => {
-            let element;
-
-            // PageId에 따라 렌더링할 컴포넌트를 결정합니다.
-            switch (route.pageId) {
-              case 'COCKTAIL_INFO_PAGE':
-                element = <CocktailListPage cocktails={allCocktails} />;
-                break;
-              case 'DRINK_CATEGORY':
-                element = <DrinkCategoryPage categoryType={route.categoryType || 'GENERAL'} />;
-                break;
-              case 'COCKTAIL_CLASSIFICATION': // 💡 새 case 추가 및 컴포넌트 연결
-                element = <CocktailClassificationPage />;
-                break;
-              case 'TOOLS':
-                element = <ToolsPage />;
-                break;
-              case 'TECHNIQUES':
-                element = <TechniquesPage />;
-                break;
-              case 'RELATED':
-                element = <RelatedPage />;
-                break;
-              default:
-                element = <NotFoundContent navigateTo={navigateTo as any} />;
-            }
-
-            return <Route key={index} path={route.path} element={element} />;
-          })}
-
-          {/* 4. 404 폴백 라우트 */}
-          <Route path="*" element={<NotFoundContent navigateTo={navigateTo as any} />} />
+          {/* 기타 라우트 추가 */}
         </Routes>
-      </div>
-    </div>
+      </Layout>
+    </Router>
   );
 }
 
-
-const AppWrapper: React.FC = () => (
-  <BrowserRouter>
-    <MainApp />
-  </BrowserRouter>
-);
-
-export default AppWrapper;
+export default App;
