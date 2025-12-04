@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import type { ClassificationStyle } from '../types/cocktail'; // 💡 타입 임포트
 import '../App.css'
 
-const API_URL = 'http://localhost:3000/cocktail-styles';
+const API_URL = import.meta.env.VITE_API_URL + '/cocktail-styles';
 
 const CocktailClassificationPage: React.FC = () => {
     const [styles, setStyles] = useState<ClassificationStyle[]>([]);
