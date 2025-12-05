@@ -2,7 +2,9 @@
 import { useState, useEffect } from 'react';
 import type { CocktailData, Page } from '../types/cocktail'; // 💡 타입 임포트 수정
 
-const API_URL = import.meta.env.VITE_API_URL +'/cocktails';
+const API_URL = 'http://localhost:3000/cocktails';
+// const API_URL = getApiUrl(ENDPOINTS.COCKTAIL); // 완전한 API URL 구성
+
 
 export const useCocktailData = (navigateTo: (pageId: Page) => void) => {
     const [allCocktails, setAllCocktails] = useState<CocktailData[]>([]);

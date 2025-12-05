@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import type { Page, CategoryType } from '../types/cocktail'; // 💡 타입 임포트 수정
-import { allRoutes, drinkMenuGroups, bartendingMenuGroups} from '../config/menuRoutes'; // 💡 설정 임포트 수정
+import { allRoutes, drinkMenuGroups, bartendingMenuGroups } from '../config/menuRoutes'; // 💡 설정 임포트 수정
 // import type {MenuGroup} from '../config/menuRoutes';
 
 export const useRouting = () => {

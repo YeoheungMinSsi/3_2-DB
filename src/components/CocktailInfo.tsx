@@ -1,16 +1,6 @@
 import React from 'react';
 import '../App.css';
-
-// App.tsx와 일치하도록 타입 정의
-interface CocktailData {
-    cocktail_id: number;
-    name_kr: string;
-    name_en: string;
-    ingredients: string[];
-    ingredients_kr: string[]; // 한국어 재료 필드
-    method_kr: string;
-    // 필요한 다른 필드들...
-}
+import type { CocktailData } from '../types/cocktail';
 
 interface CocktailInfoProps {
     cocktail: CocktailData | null; // 랜덤으로 선택된 칵테일 데이터

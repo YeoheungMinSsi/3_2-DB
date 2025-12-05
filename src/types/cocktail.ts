@@ -21,6 +21,10 @@ export interface ClassificationStyle {
     iba_cocktail_examples: { kr: string[], en: string[] };
 }
 
+export interface CocktailListPageProps {
+    cocktails: CocktailData[];
+}
+
 // 뷰 상태 (페이지 ID) - App.tsx에서 복사
 export type Page =
     'HOME' |

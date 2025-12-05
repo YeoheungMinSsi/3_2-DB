@@ -10,7 +10,7 @@ const Nav: React.FC<NavProps> = ({ navigateTo, drinkMenuGroups, bartendingMenuGr
             {/* 홈페이지명 클릭 시 HOME으로 이동 */}
             <div id="page-Name">
                 {/* Link를 사용하여 HOME으로 이동 */}
-                <Link to="/">홈페이지명</Link>
+                <Link to="/">술</Link>
             </div>
 
             <nav className='header-nav-container'>
